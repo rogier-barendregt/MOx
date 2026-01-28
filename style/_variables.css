@@ -137,7 +137,7 @@
   --space-2: 2px;
   --space-base: 8px; /** Base spacing-size for calculation. Defaults to 8 to follow 8px grid. */
   --font-weight-regular: 400;
-  --font-weight-semi-bold: 600;
+  --font-weight-semi-bold: 500;
   --font-weight-bold: 700;
   --font-size-base: 16px;
   --line-height-loose: 1.5;

@@ -23,6 +23,9 @@ body {
     color: var(--global-color-neutraal-zwart);
     font-family: 'RijksSansVF';
 }
+button, input, select {
+    font: inherit;
+}
 
 header {
     .logo {
@@ -47,4 +50,14 @@ header {
 main {
     margin: 0 auto;
     max-width: 1140px;
+}
+
+button, [type=button], [type=submit] {
+    background: var(--color-interactive-primary-background-idle);
+    border: 2px solid var(--color-interactive-primary-background-idle);
+    border-radius: 2px;
+    color: #fff;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semi-bold);
+    padding: var(--space-8) var(--space-16);
 }
