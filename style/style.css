@@ -1,0 +1,50 @@
+/* Importeer Rijkhuisstijl design tokens als variabelen */
+@import '_variables.css';
+
+/* Importeer reset-stijlen */
+@import '_reset.css';
+
+/* Voeg Rijksoverheid Sans lettertype toe */
+@font-face {
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/RijksSansVF-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: var(--font-family-primary);
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/RijksSansVF-Italic.ttf') format('ttf');
+}
+
+body {
+    color: var(--global-color-neutraal-zwart);
+    font-family: 'RijksSansVF';
+}
+
+header {
+    .logo {
+        margin: 0 auto;
+        width: var(--size-logo-width);
+    }
+    nav {
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+.page-head {
+    margin: 0 auto;
+    max-width: 1140px;
+    .title {
+        font: var(--typography-heading-h1);
+    }
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1140px;
+}
