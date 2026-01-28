@@ -2,7 +2,7 @@
 
 ## Structuur
 
-``` bash
+``` text
 
 📂 assets
     📁 favicon          favicons voor diverse platformen
