@@ -23,9 +23,6 @@ body {
     color: var(--global-color-neutraal-zwart);
     font-family: 'RijksSansVF';
 }
-button, input, select {
-    font: inherit;
-}
 
 header {
     .logo {
@@ -38,7 +35,6 @@ header {
         }
     }
 }
-
 .page-head {
     margin: 0 auto;
     max-width: 1140px;
@@ -51,28 +47,34 @@ main {
     margin: 0 auto;
     max-width: 1140px;
 }
+footer {}
 
-/* Formulier-elementen */
-
+/* Formulier elementen */
+form {}
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
+button, input, select, textarea {
+    font: inherit;
+}
 
+/* Formulieren: Labeling */
 label, legend, .form-helper-text {
     display: block;
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-regular);
     margin-bottom: var(--space-4);
 }
-legend {
+legend, label {
     font-weight: var(--font-weight-semi-bold);
 }
 .form-helper-text {
     color: var(--global-color-neutraal-donkergrijs);
 }
 
+/* Formulier: Knoppen */
 button, [type=button], [type=submit] {
     background: var(--color-interactive-primary-background-idle);
     border: 2px solid var(--color-interactive-primary-background-idle);
@@ -82,3 +84,32 @@ button, [type=button], [type=submit] {
     font-weight: var(--font-weight-semi-bold);
     padding: var(--space-8) var(--space-16);
 }
+
+/* Formulier: Tekstinvoer */
+[type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url] {
+    border: var;
+}
+
+/* Formulier: Selectie */
+[type=checkbox] {}
+[type=radio] {}
+select {}
+select[multiple] {}
+optgroup {}
+option {}
+
+/* Formulier: Bestand selecteren */
+[type=file] {}
+
+
+/* Ruimtelijk systeem */
+/* Groeperen */
+.space-4 {height: var(--space-4);width: var(--space-4);}
+.space-8 {height: var(--space-8);width: var(--space-8);}
+.space-12 {height: var(--space-12);width: var(--space-12);}
+.space-16 {height: var(--space-16);width: var(--space-16);}
+.space-24 {height: var(--space-24);width: var(--space-24);}
+/* Afzonderen */
+.space-32 {height: var(--space-32);width: var(--space-32);}
+.space-40 {height: var(--space-40);width: var(--space-40);}
+.space-48 {height: var(--space-48);width: var(--space-48);}

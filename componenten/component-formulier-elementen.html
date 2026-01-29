@@ -10,6 +10,7 @@
     <link rel="icon" sizes="192x192" href="../favicon/touch-icon.png">
     <link rel="apple-touch-icon" href="../favicon/apple-touch-icon.png">
 </head>
+
 <body>
 
 <header>
@@ -23,18 +24,18 @@
         <fieldset>
             <legend>Tekstinvoer</legend>
 
+            <div class="space-16"></div>
+
             <label for="input-text">Standaard tekstinvoerveld</label>
             <div class="form-helper-text" id="input-text--helper-text">Optionele ondersteunende help tekst indien nodig, bijvoorbeeld een hint over het verwachte formaat van invoer.</div>
             <input type="text" id="input-text" aria-describedby="input-text--helper-text">
 
-            <pre>
-                <code>
-&lt;label for="input-text"&gt;Standaard tekstinvoerveld&lt;/label&gt;
-&lt;div class="form-helper-text" id="input-text--helper-text"&gt;Optionele help tekst&lt;/div&gt;
-&lt;input type="text" id="input-text" aria-describedby="input-text--helper-text"&gt;
-                </code>
-            </pre>
-            
+            <div class="space-16"></div>
+
+            <label for="input-email">E-mailadres</label>
+            <div class="form-helper-text" id="emailadress--helper-text">Optionele ondersteunende help tekst indien nodig, bijvoorbeeld een hint over het verwachte formaat van invoer.</div>
+            <input type="email" id="input-email" aria-describedby="emailadress--helper-text">
+          
         </fieldset>
     </form>
 </main>
