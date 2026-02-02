@@ -132,79 +132,287 @@
   --color-grijs-500: #999999; /** Grijs 500 */
   --color-grijs-600: #696969; /** Grijs 600 */
   --color-grijs-700: #535353; /** Grijs 700 */
-  --color-interactive-idle: #154273; /** Primaire interactiekleur. Deze kleur duidt aan dat een element interactief is en een actie kan uitvoeren. De kleur wordt toegepast in de standaardstaat van een interactief element, voordat er sprake is van interactie zoals hover of selectie. */
-  --color-interactive-input-border-idle: #3b3b3b;
-  --color-interactive-input-border-hover: #154273;
-  /**
-   * Voorgrondkleur voor interactieve elementen voor tekst of iconen die op een interactieve achtergrond zijn geplaatst.
-   * Combineren met interactie achtergrondkleuren.
-   */
-  --color-interactive-foreground: #ffffff;
-  /**
-   * Hover-staat. Toegepast wanneer een gebruiker met de cursor over een interactief element beweegt. De hover-staat biedt visuele feedback dat het element interactief is en gereed is om een actie uit te voeren, zonder dat de actie al is geactiveerd.
-   * Alleen te gebruiken om verandering van staat weer te geven.
-   */
-  --color-interactive-hover: #1e293b;
-  /**
-   * Focus-staat. Gebruikt om aan te geven dat een interactief element focus heeft, bijvoorbeeld via toetsenbordnavigatie. De focus-staat helpt gebruikers te identificeren welk element actief is voor interactie, zodat toegankelijkheid en navigatie duidelijk zijn.
-   * Alleen te gebruiken om verandering van staat weer te geven én in combinatie met een focus-ring (zie kaders).
-   */
-  --color-interactive-focus: #1e293b;
-  --color-interactive-active: #475569; /** Actieve staat. Toegepast wanneer een interactief element wordt geactiveerd, bijvoorbeeld bij het klikken of aanraken. De actieve-staat geeft visuele feedback dat de actie wordt uitgevoerd of recent is uitgevoerd. */
-  --color-interactive-disabled: #696969; /** Uitgeschakelde staat. Deze kleur wordt gebruikt voor elementen die momenteel niet interactief zijn. De uitgeschakelde staat geeft aan dat het element niet beschikbaar is voor interactie en dat er geen actie kan worden uitgevoerd. */
-  --color-interactive-background-idle: #ffffff;
-  --color-input-background: #ffffff;
-  --color-input-control-checked: #154273;
-  --color-logo-foreground: #ffffff;
-  --color-logo-background: #154273;
-  --color-surface-page: #ffffff; /** Standaard oppervlakte achtergrondkleur */
-  --color-surface-wayfinding: #154273; /** Achtergrondkleur voor groepering van hoog-over oriëntatievoorziening */
-  --color-surface-muted: #f3f3f3; /** Achtergrond voor secundaire inhoud */
-  --color-text-body: #3b3b3b; /** Standaardtekstkleur. Omwille van de toegankelijkheid wordt geen gebruikgemaakt van puur zwarte tekst op een puur witte achtergrond, vanwege het te grote contrastverschil. Er wordt een neutrale grijstint zonder kleurtint toegepast om variaties in kleurweergave bij eindgebruikers te minimaliseren. */
-  --color-text-muted: #535353; /** Ondersteunende tekst, secundair aan primaire inhoud. */
-  --color-text-wayfinding: #ffffff;
-  --color-icon-static: #3b3b3b; /** Kleur van een standaard, niet-interactief, pictogram. */
-  --color-icon-static-inverse: #ffffff; /** Kleur van een standaard, niet-interactief, pictogram. */
-  /**
-   * Kleur voor het communiceren van een succesvol uitgevoerde actie van gebruiker of vanuit een systeem.
-   * Te combineren met color.feedback.success.b.
-   */
-  --color-feedback-success-a: #39870c;
-  /**
-   * Kleur voor het communiceren van een succesvol uitgevoerde actie van gebruiker of vanuit een systeem.
-   * Te combineren met color.feedback.success.a.
-   */
-  --color-feedback-success-b: #e1eddb;
-  /**
-   * Kleur om nadruk te leggen op belangrijke informatie.
-   * Te combineren met color.feedback.info.b.
-   */
-  --color-feedback-info-a: #007bc7;
-  /**
-   * Kleur om nadruk te leggen op belangrijke informatie.
-   * Te combineren met color.feedback.info.a.
-   */
-  --color-feedback-info-b: #d9ebf7;
-  /**
-   * Kleur voor het communiceren van een waarschuwing.
-   * Te combineren met color.feedback.warning.b.
-   */
-  --color-feedback-warning-a: #ffb612;
-  /**
-   * Kleur voor het communiceren van een waarschuwing.
-   * Te combineren met color.feedback.warning.a.
-   */
-  --color-feedback-warning-b: #fff4db;
-  /**
-   * Kleur voor het communiceren van een foutief resultaat op een actie van gebruiker of vanuit een systeem, een gebruiker kan niet verder zonder de fout te herstellen.
-   * Te combineren met color.feedback.error.b.
-   */
-  --color-feedback-error-a: #d52b1e;
-  /**
-   * Kleur voor het communiceren van een foutief resultaat op een actie van gebruiker of vanuit een systeem, een gebruiker kan niet verder zonder de fout te herstellen.
-   * Te combineren met color.feedback.error.b.
-   */
-  --color-feedback-error-b: #f9dfdd;
+  --color-transparent: rgba(0, 0, 0, 0);
+  --color-default-bg-document: #ffffff;
+  --color-default-bg-subtle: #f3f3f3;
+  --color-default-bg-default: #ffffff;
+  --color-default-bg-hover: #f3f3f3;
+  --color-default-bg-active: #f3f3f3;
+  --color-default-border-subtle: #b4b4b4;
+  --color-default-border-default: #999999;
+  --color-default-border-hover: #696969;
+  --color-default-border-active: #999999;
+  --color-default-color-default: #3b3b3b;
+  --color-default-color-hover: #535353;
+  --color-default-color-active: #535353;
+  --color-default-color-subtle: #535353;
+  --color-default-color-document: #3b3b3b;
+  --color-accent-1-bg-document: #ffffff;
+  --color-accent-1-bg-subtle: #f3f3f3;
+  --color-accent-1-bg-default: #ffffff;
+  --color-accent-1-bg-hover: #f3f3f3;
+  --color-accent-1-bg-active: #f3f3f3;
+  --color-accent-1-border-subtle: #b4b4b4;
+  --color-accent-1-border-default: #999999;
+  --color-accent-1-border-hover: #696969;
+  --color-accent-1-border-active: #999999;
+  --color-accent-1-color-default: #3b3b3b;
+  --color-accent-1-color-hover: #535353;
+  --color-accent-1-color-active: #535353;
+  --color-accent-1-color-subtle: #535353;
+  --color-accent-1-color-document: #154273;
+  --color-action-1-bg-document: #ffffff;
+  --color-action-1-bg-subtle: #f3f3f3;
+  --color-action-1-bg-default: #ffffff;
+  --color-action-1-bg-hover: #f3f3f3;
+  --color-action-1-bg-active: #f3f3f3;
+  --color-action-1-border-subtle: #b4b4b4;
+  --color-action-1-border-default: #999999;
+  --color-action-1-border-hover: #696969;
+  --color-action-1-border-active: #999999;
+  --color-action-1-color-default: #3b3b3b;
+  --color-action-1-color-hover: #535353;
+  --color-action-1-color-active: #535353;
+  --color-action-1-color-subtle: #535353;
+  --color-action-1-color-document: #154273;
+  --color-disabled-bg-document: #ffffff;
+  --color-disabled-bg-subtle: #ffffff;
+  --color-disabled-bg-default: #ffffff;
+  --color-disabled-bg-hover: #ffffff;
+  --color-disabled-bg-active: #ffffff;
+  --color-disabled-border-subtle: #b4b4b4;
+  --color-disabled-border-default: #b4b4b4;
+  --color-disabled-border-hover: #b4b4b4;
+  --color-disabled-border-active: #b4b4b4;
+  --color-disabled-color-default: #535353;
+  --color-disabled-color-hover: #535353;
+  --color-disabled-color-active: #535353;
+  --color-disabled-color-subtle: #535353;
+  --color-disabled-color-document: #535353;
+  --color-info-bg-document: #fbfcfd;
+  --color-info-bg-subtle: #f4f7fa;
+  --color-info-bg-default: #ecf1f7;
+  --color-info-bg-hover: #e4ecf4;
+  --color-info-bg-active: #dde6f1;
+  --color-info-border-subtle: #b0c6df;
+  --color-info-border-default: #5c89be;
+  --color-info-border-hover: #4e7fb8;
+  --color-info-border-active: #3f74b2;
+  --color-info-color-default: #1b59a4;
+  --color-info-color-hover: #04499a;
+  --color-info-color-active: #003b81;
+  --color-info-color-subtle: #2964aa;
+  --color-info-color-document: #001b3c;
+  --color-negative-bg-document: #fffbfb;
+  --color-negative-bg-subtle: #fef4f4;
+  --color-negative-bg-default: #feeded;
+  --color-negative-bg-hover: #fde6e6;
+  --color-negative-bg-active: #fddede;
+  --color-negative-border-subtle: #f9b1b1;
+  --color-negative-border-default: #f14848;
+  --color-negative-border-hover: #ef2929;
+  --color-negative-border-active: #e60000;
+  --color-negative-color-default: #b70000;
+  --color-negative-color-hover: #9c0000;
+  --color-negative-color-active: #930000;
+  --color-negative-color-subtle: #ca0000;
+  --color-negative-color-document: #410000;
+  --color-positive-bg-document: #fafdfb;
+  --color-positive-bg-subtle: #eff9f3;
+  --color-positive-bg-default: #e4f5ea;
+  --color-positive-bg-hover: #d9f1e2;
+  --color-positive-bg-active: #ceedd9;
+  --color-positive-border-subtle: #8ad3a6;
+  --color-positive-border-default: #009b3a;
+  --color-positive-border-hover: #009036;
+  --color-positive-border-active: #008432;
+  --color-positive-color-default: #006827;
+  --color-positive-color-hover: #005821;
+  --color-positive-color-active: #00481b;
+  --color-positive-color-subtle: #00732b;
+  --color-positive-color-document: #00210c;
+  --color-warning-bg-document: #fffcf8;
+  --color-warning-bg-subtle: #fff5eb;
+  --color-warning-bg-default: #ffeedd;
+  --color-warning-bg-hover: #ffe7d0;
+  --color-warning-bg-active: #ffe0c2;
+  --color-warning-border-subtle: #ffb46b;
+  --color-warning-border-default: #c8700e;
+  --color-warning-border-hover: #b86810;
+  --color-warning-border-active: #a96011;
+  --color-warning-color-default: #844c12;
+  --color-warning-color-hover: #6f4012;
+  --color-warning-color-active: #5a3511;
+  --color-warning-color-subtle: #935412;
+  --color-warning-color-document: #27190a;
+  --color-highlight-bg-document: #fffcf2;
+  --color-highlight-bg-subtle: #fff7d7;
+  --color-highlight-bg-default: #fff1bb;
+  --color-highlight-bg-hover: #ffeb9d;
+  --color-highlight-bg-active: #ffe57c;
+  --color-highlight-border-subtle: #e6c10c;
+  --color-highlight-border-default: #9e8418;
+  --color-highlight-border-hover: #927a18;
+  --color-highlight-border-active: #867018;
+  --color-highlight-color-default: #695817;
+  --color-highlight-color-hover: #594a16;
+  --color-highlight-color-active: #483d14;
+  --color-highlight-color-subtle: #756218;
+  --color-highlight-color-document: #201b0c;
+  --color-selected-bg-document: #ffffff;
+  --color-selected-bg-subtle: #f3f3f3;
+  --color-selected-bg-default: #ffffff;
+  --color-selected-bg-hover: #f3f3f3;
+  --color-selected-bg-active: #f3f3f3;
+  --color-selected-border-subtle: #b4b4b4;
+  --color-selected-border-default: #999999;
+  --color-selected-border-hover: #696969;
+  --color-selected-border-active: #999999;
+  --color-selected-color-default: #3b3b3b;
+  --color-selected-color-hover: #535353;
+  --color-selected-color-active: #535353;
+  --color-selected-color-subtle: #535353;
+  --color-selected-color-document: #154273;
+  --color-default-inverse-bg-document: #242424;
+  --color-default-inverse-bg-subtle: #1b1b1b;
+  --color-default-inverse-bg-default: #595959;
+  --color-default-inverse-bg-hover: #4b4b4b;
+  --color-default-inverse-bg-active: #3e3e3e;
+  --color-default-inverse-border-subtle: #474747;
+  --color-default-inverse-border-default: #c9c9c9;
+  --color-default-inverse-border-hover: #d4d4d4;
+  --color-default-inverse-border-active: #dfdfdf;
+  --color-default-inverse-color-default: #ffffff;
+  --color-default-inverse-color-hover: #ffffff;
+  --color-default-inverse-color-active: #ffffff;
+  --color-default-inverse-color-subtle: #c4c4c4;
+  --color-default-inverse-color-document: #ffffff;
+  --color-accent-1-inverse-bg-document: #00234d;
+  --color-accent-1-inverse-bg-subtle: #001b3c;
+  --color-accent-1-inverse-bg-default: #1b59a4;
+  --color-accent-1-inverse-bg-hover: #04499a;
+  --color-accent-1-inverse-bg-active: #003b81;
+  --color-accent-1-inverse-border-subtle: #004494;
+  --color-accent-1-inverse-border-default: #b8cbe2;
+  --color-accent-1-inverse-border-hover: #c6d6e8;
+  --color-accent-1-inverse-border-active: #d5e1ee;
+  --color-accent-1-inverse-color-default: #ffffff;
+  --color-accent-1-inverse-color-hover: #ffffff;
+  --color-accent-1-inverse-color-active: #ffffff;
+  --color-accent-1-inverse-color-subtle: #b0c6df;
+  --color-accent-1-inverse-color-document: #ffffff;
+  --color-action-1-inverse-bg-document: #00234d;
+  --color-action-1-inverse-bg-subtle: #001b3c;
+  --color-action-1-inverse-bg-default: #1b59a4;
+  --color-action-1-inverse-bg-hover: #04499a;
+  --color-action-1-inverse-bg-active: #003b81;
+  --color-action-1-inverse-border-subtle: #004494;
+  --color-action-1-inverse-border-default: #b8cbe2;
+  --color-action-1-inverse-border-hover: #c6d6e8;
+  --color-action-1-inverse-border-active: #d5e1ee;
+  --color-action-1-inverse-color-default: #ffffff;
+  --color-action-1-inverse-color-hover: #ffffff;
+  --color-action-1-inverse-color-active: #ffffff;
+  --color-action-1-inverse-color-subtle: #b0c6df;
+  --color-action-1-inverse-color-document: #ffffff;
+  --color-disabled-inverse-bg-document: #595959;
+  --color-disabled-inverse-bg-subtle: #595959;
+  --color-disabled-inverse-bg-default: #595959;
+  --color-disabled-inverse-bg-hover: #595959;
+  --color-disabled-inverse-bg-active: #595959;
+  --color-disabled-inverse-border-subtle: #474747;
+  --color-disabled-inverse-border-default: #474747;
+  --color-disabled-inverse-border-hover: #474747;
+  --color-disabled-inverse-border-active: #474747;
+  --color-disabled-inverse-color-default: #c4c4c4;
+  --color-disabled-inverse-color-hover: #c4c4c4;
+  --color-disabled-inverse-color-active: #c4c4c4;
+  --color-disabled-inverse-color-subtle: #c4c4c4;
+  --color-disabled-inverse-color-document: #c4c4c4;
+  --color-info-inverse-bg-document: #00234d;
+  --color-info-inverse-bg-subtle: #001b3c;
+  --color-info-inverse-bg-default: #1b59a4;
+  --color-info-inverse-bg-hover: #04499a;
+  --color-info-inverse-bg-active: #003b81;
+  --color-info-inverse-border-subtle: #004494;
+  --color-info-inverse-border-default: #b8cbe2;
+  --color-info-inverse-border-hover: #c6d6e8;
+  --color-info-inverse-border-active: #d5e1ee;
+  --color-info-inverse-color-default: #ffffff;
+  --color-info-inverse-color-hover: #ffffff;
+  --color-info-inverse-color-active: #ffffff;
+  --color-info-inverse-color-subtle: #b0c6df;
+  --color-info-inverse-color-document: #ffffff;
+  --color-negative-inverse-bg-document: #510000;
+  --color-negative-inverse-bg-subtle: #410000;
+  --color-negative-inverse-bg-default: #b70000;
+  --color-negative-inverse-bg-hover: #9c0000;
+  --color-negative-inverse-bg-active: #820000;
+  --color-negative-inverse-border-subtle: #930000;
+  --color-negative-inverse-border-default: #fab9b9;
+  --color-negative-inverse-border-hover: #fbc8c8;
+  --color-negative-inverse-border-active: #fcd7d7;
+  --color-negative-inverse-color-default: #ffffff;
+  --color-negative-inverse-color-hover: #ffffff;
+  --color-negative-inverse-color-active: #ffffff;
+  --color-negative-inverse-color-subtle: #f9b1b1;
+  --color-negative-inverse-color-document: #ffffff;
+  --color-positive-inverse-bg-document: #002b10;
+  --color-positive-inverse-bg-subtle: #00210c;
+  --color-positive-inverse-bg-default: #006827;
+  --color-positive-inverse-bg-hover: #005821;
+  --color-positive-inverse-bg-active: #00481b;
+  --color-positive-inverse-border-subtle: #00531f;
+  --color-positive-inverse-border-default: #96d8ae;
+  --color-positive-inverse-border-hover: #ace0c0;
+  --color-positive-inverse-border-active: #c3e9d1;
+  --color-positive-inverse-color-default: #ffffff;
+  --color-positive-inverse-color-hover: #ffffff;
+  --color-positive-inverse-color-active: #ffffff;
+  --color-positive-inverse-color-subtle: #8ad3a6;
+  --color-positive-inverse-color-document: #ffffff;
+  --color-warning-inverse-bg-document: #331f0d;
+  --color-warning-inverse-bg-subtle: #27190a;
+  --color-warning-inverse-bg-default: #844c12;
+  --color-warning-inverse-bg-hover: #6f4012;
+  --color-warning-inverse-bg-active: #5a3511;
+  --color-warning-inverse-border-subtle: #683c12;
+  --color-warning-inverse-border-default: #ffbc7a;
+  --color-warning-inverse-border-hover: #ffcb98;
+  --color-warning-inverse-border-active: #ffd9b4;
+  --color-warning-inverse-color-default: #ffffff;
+  --color-warning-inverse-color-hover: #ffffff;
+  --color-warning-inverse-color-active: #ffffff;
+  --color-warning-inverse-color-subtle: #ffb46b;
+  --color-warning-inverse-color-document: #ffffff;
+  --color-highlight-inverse-bg-document: #2a230f;
+  --color-highlight-inverse-bg-subtle: #201b0c;
+  --color-highlight-inverse-bg-default: #695817;
+  --color-highlight-inverse-bg-hover: #594a16;
+  --color-highlight-inverse-bg-active: #483d14;
+  --color-highlight-inverse-border-subtle: #534615;
+  --color-highlight-inverse-border-default: #ecc609;
+  --color-highlight-inverse-border-hover: #f9d103;
+  --color-highlight-inverse-border-active: #ffde56;
+  --color-highlight-inverse-color-default: #ffffff;
+  --color-highlight-inverse-color-hover: #ffffff;
+  --color-highlight-inverse-color-active: #ffffff;
+  --color-highlight-inverse-color-subtle: #e6c10c;
+  --color-highlight-inverse-color-document: #ffffff;
+  --color-selected-inverse-bg-document: #00234d;
+  --color-selected-inverse-bg-subtle: #001b3c;
+  --color-selected-inverse-bg-default: #1b59a4;
+  --color-selected-inverse-bg-hover: #04499a;
+  --color-selected-inverse-bg-active: #003b81;
+  --color-selected-inverse-border-subtle: #004494;
+  --color-selected-inverse-border-default: #b8cbe2;
+  --color-selected-inverse-border-hover: #c6d6e8;
+  --color-selected-inverse-border-active: #d5e1ee;
+  --color-selected-inverse-color-default: #ffffff;
+  --color-selected-inverse-color-hover: #ffffff;
+  --color-selected-inverse-color-active: #ffffff;
+  --color-selected-inverse-color-subtle: #b0c6df;
+  --color-selected-inverse-color-document: #ffffff;
   --size-0: 0;
   --size-1: 0.0625rem;
   --size-2: 0.125rem;
@@ -359,7 +567,7 @@
   --form-control-focus-border-width: 0.125rem;
   --form-control-hover-border-width: 0.125rem;
   --form-control-invalid-border-width: 0.125rem;
-  --border-form-textinput: 0.0625rem solid #3b3b3b;
+  --border-form-textinput: 0.0625rem solid #999999;
   --spacing-padding-horizontal-start-end-4: 0.25rem;
   --spacing-padding-horizontal-start-end-8: 0.5rem;
   --spacing-padding-horizontal-start-end-12: 0.75rem;

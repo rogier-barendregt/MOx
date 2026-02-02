@@ -72,6 +72,7 @@ legend, label {
 
 /* Formulier: Knoppen */
 button {
+    background: var(--);
 }
 
 /* Formulier: Tekstinvoer */
