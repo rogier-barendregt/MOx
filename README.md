@@ -37,6 +37,14 @@ Dit resulteert in wijzigingen in `_variables.css`. Dit variabelen bestand wordt 
 
 ```
 
+## Design tokens in Figma
+
+Om met de design tokens in Figma te werken dient gebruik gemaakt te worden van [de Tokens Studio plugin]([url](https://www.figma.com/community/plugin/843461159747178978/tokens-studio-for-figma)). Wanneer deze geïnstalleerd is kan je [middels deze uitleg de tokens in Figma importeren]([url](https://docs.tokens.studio/token-storage/remote/sync-git-github)) (en vervolgens optioneel omzetten in Figma variabelen en/of stijlen).
+
+In Tokens Studio verwijs je vervolgens naar deze repository en folder/bestand `tokens/tokens.json`.
+
+Hierna is een twee-weg bewerking mogelijk middels Git; tokens zijn zowel in JSON zelf (IDE of tekstverwerker) als in Figma aan te maken, wijzigen en verwijderen.
+
 ## Commit berichten
 
 `Initial commit`
