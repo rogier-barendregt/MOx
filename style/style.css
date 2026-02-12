@@ -1,7 +1,10 @@
 /* Importeer Rijkhuisstijl design tokens als variabelen */
-@import '_variables.css';
+@import '_rijkshuisstijl.css';
 
-/* Importeer reset-stijlen */
+/* Importeer MOx common design tokens als variabelen */
+@import '_mox.css';
+
+/* Importeer reset stijlen */
 @import '_reset.css';
 
 /* Voeg Rijksoverheid Sans lettertype toe */
@@ -17,69 +20,6 @@
     font-style: italic;
     font-weight: 400;
     src: url('../assets/fonts/RijksSansVF-Italic.ttf') format('ttf');
-}
-
-/* Class namen zijn voor nu nog niet genamespaced, we kunnen mox- overwegen i.v.m. latere aansluiting op NLDS */
-
-/* Layout */
-.space-4xs {
-    height: var(--space-block-4xs);
-    width: var(--space-inline-4xs);
-}
-
-.space-3xs {
-    height: var(--space-block-3xs);
-    width: var(--space-inline-3xs);
-}
-
-.space-2xs {
-    height: var(--space-block-2xs);
-    width: var(--space-inline-2xs);
-}
-
-.space-xs {
-    height: var(--space-block-xs);
-    width: var(--space-inline-xs);
-}
-
-.space-sm {
-    height: var(--space-block-sm);
-    width: var(--space-inline-sm);
-}
-
-.space-md {
-    height: var(--space-block-md);
-    width: var(--space-inline-md);
-}
-
-.space-lg {
-    height: var(--space-block-lg);
-    width: var(--space-inline-lg);
-}
-
-.space-xl {
-    height: var(--space-block-xl);
-    width: var(--space-inline-xl);
-}
-
-.space-2xl {
-    height: var(--space-block-2xl);
-    width: var(--space-inline-2xl);
-}
-
-.space-3xl {
-    height: var(--space-block-3xl);
-    width: var(--space-inline-3xl);
-}
-
-.space-4xl {
-    height: var(--space-block-4xl);
-    width: var(--space-inline-4xl);
-}
-
-.space-5xl {
-    height: var(--space-block-5xl);
-    width: var(--space-inline-5xl);
 }
 
 /* Toewerken naar generieke interactieve en feedback staten */
@@ -98,7 +38,7 @@
 }
 
 body {
-    color: var(  --color-text-body);
+    color: var(--mox-color-text-default);
     font-family: 'RijksSansVF';
 }
 

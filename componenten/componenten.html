@@ -13,11 +13,15 @@
         body {
             padding-bottom: 2rem;
         }
-        small.info {
+        div.info {
             background: #fdf;
             border: 1px solid #f0f;
             display: inline-block;
             padding: 1rem;
+        }
+        button {
+            display: block;
+            margin-bottom: 1rem;   
         }
     </style>
 </head>
@@ -31,59 +35,40 @@
 </header>
 
 <main>
-
-    <h1>MOx front-end componenten</h1>
-    <div class="space-md"></div>
-    <h2>Knoppen</h2>
-    <div class="space-md"></div>
+    <hgroup>
+        <h1>MOx front-end componenten</h1>
+        <h2>Knoppen</h2>
+    </hgroup>
 
     <form>
 
         <fieldset>
 
             <button type="button">Standaard primaire knop</button>
-
-            <div class="space-md"></div>
             
             <button type="reset">Reset knop</button>
             
-            <div class="space-md"></div>
-            
             <button type="submit">Submit knop</button>
-            
-            <div class="space-md"></div>
             
             <button aria-disabled>Inactieve knop</button>
             
-            <div class="space-md"></div>
-            
             <button class="negative">Destructieve actie</button>
-            
-            <div class="space-md"></div>
             
             <button type="button">
                 Knop met <b>tekst</b> <i>stijlen</i>
             </button>
             
-            <div class="space-md"></div>
-            
             <button type="button">
                 <span>⚑</span> Knop met icoon voor tekst
             </button>
             
-            <div class="space-md"></div>
-            
             <!-- <button type="button">
                 Knop met icoon achter tekst <span>☀︎</span>
-            </button>
-            
-            <div class="space-md"></div> -->
+            </button> -->
 
             <button type="button" class="secondary">Secundaire knop</button>
-            <div class="space-xs"></div>
-            <small class="info">ℹ️ Work in progress, de interactieve staten van deze knop zijn niet gedefinieerd in de rijkshuisstijl</small>
 
-            <div class="space-md"></div>
+            <div class="info">ℹ️ Work in progress, de interactieve staten van deze knop zijn niet gedefinieerd in de rijkshuisstijl</div>
 
         </fieldset>
 
