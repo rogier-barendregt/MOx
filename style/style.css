@@ -22,21 +22,6 @@
     src: url('../assets/fonts/RijksSansVF-Italic.ttf') format('truetype');
 }
 
-/* Toewerken naar generieke interactieve en feedback staten */
-:focus:not(:focus-visible) {
-    outline: none; /* Verberg focus outline voor muis-gebruikers, behoud focus outline voor alle andere gebruikers (toetsenbord, spraak, switch) */
-}
-:focus-visible {
-    outline: var(--border-focus);
-    outline-offset: var(--focus-outline-offset);
-    &[aria-disabled] {
-        outline-color: var(--color-disabled-border-default);
-    }
-    &.negative {
-        outline-color: var(--color-negative-border-default);
-    }
-}
-
 body {
     color: var(--mox-color-text-default);
     font-family: var(--mox-text-font-family-body), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
@@ -92,70 +77,106 @@ em, i { font-style: italic; }
 a {
     color: var(--mox-color-interactive-active-text);
     text-decoration: var(--mox-text-text-decoration-hyperlink);
-    text-underline-offset: var(--mox-text-text-underline-offset-hyperlink);
+    text-underline-offset: 3px; /* Vaste waarde voor onderstreping offset, niet in design tokens gedefinieerd omdat deze slechts eenmaal voorkomt */
     text-decoration-skip-ink: auto;
     &:hover {
-        color: var(--link-hover-color);
+        color: var(--mox-color-interactive-hover-text);
+        text-decoration: none;
     }
     &:active {
-        color: var(--link-active-color);
+        color: var(--mox-color-interactive-active-text);
+    }
+}
+
+code, kbd, pre, samp, var {
+    background: var(--mox-color-background-subtle);
+    font: var(--mox-text-code);
+}
+pre {
+    padding: var(--mox-space-padding-sm);
+}
+
+/* Focus voor keyboard, spraak en switch gebruikers */
+    :focus:not(:focus-visible) {
+    outline: none; /* Verberg focus outline voor muis-gebruikers, behoud focus outline voor alle andere gebruikers (toetsenbord, spraak, switch) */
+}
+:focus-visible {
+    outline: var(--mox-focus-outline);
+    outline-offset: var(--mox-size-5xs);
+    &[aria-disabled] {
+        outline-color: var(--mox-color-interactive-disabled-border);
+    }
+    &.negative {
+        outline-color: var(--mox-color-feedback-error-border);
     }
 }
 
 /* Formulier elementen */
+
 form {}
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+
+fieldset {}
+
 button, input, select, textarea {
+    background: var(--mox-color-interactive-default-surface);
+    border: var(--mox-border-width-md) solid var(--mox-color-interactive-default-border);
+    border-radius: var(--mox-border-radius-sm);
     font: inherit;
-    border: var(--form-control-border-width);
+    min-height: var(--mox-pointer-target-min-size);
+    min-width: var(--mox-pointer-target-min-size);
+    padding: var(--mox-space-padding-sm) var(--mox-space-padding-md);
+    &:hover {
+        border-color: var(--mox-color-interactive-hover-border);
+    }
+    &:active {
+        border-color: var(--mox-color-interactive-active-border);
+    }
+    &[aria-disabled] {
+        border-color: var(--mox-color-interactive-disabled-border);
+    }
+    &[aria-invalid] {
+        border-color: var(--mox-color-feedback-error-border);
+    }
+    &.negative {
+        border-color: var(--mox-color-feedback-error-border);
+    }
 }
 
 /* Formulieren: Labeling */
-label, legend, .form-helper-text {
-    display: block;
-}
+
 legend, label {
-}
-.form-helper-text {
+    font: var(--mox-text-paragraph-default);
 }
 
 /* Knoppen */
 button {
-    background: var(--button-primary-background-color);
-    border: var(--button-border-width) solid var(--button-primary-border-color);
-    border-radius: var(--button-border-radius);
-    color: var(--button-primary-color);
+    background: var(--mox-color-interactive-default-background);
+    color: var(--mox-color-text-inverse);
     cursor: pointer;
-    min-height: var(--pointer-target-min-block-size);
-    min-width: var(--pointer-target-min-inline-size);
-    padding: var(--button-padding-block-start) var(--button-padding-inline-start);
     span {
         display: inline-block;
-        padding: 0 var(--space-inline-sm) 0 0;
     }
-    &:hover, &:focus-visible {
-        background: var(--button-primary-hover-background-color);
-        border-color: var(--button-primary-hover-border-color);
-        color: var(--button-primary-hover-color);
+    &.secondary {
+        background: var(--mox-color-interactive-default-surface);
+        border-color: var(--mox-color-interactive-default-border);
+        color: var(--mox-color-interactive-default-text);
+    }
+    &:hover {
+        background: var(--mox-color-interactive-hover-background);
+        border-color: var(--mox-color-interactive-hover-border);
+        color: var(--mox-color-text-inverse);
     }
     &:active {
-        background: var(--button-primary-active-background-color);
-        border-color: var(--button-primary-active-border-color);
-        color: var(--button-primary-active-color);
+        background: var(--mox-color-interactive-active-background);
+        border-color: var(--mox-color-interactive-active-border);
     }
     &[aria-disabled] {
-        background: var(--button-primary-disabled-background-color);
-        border-color: var(--button-primary-disabled-border-color);
-        color: var(--button-primary-disabled-color);
+        background: var(--mox-color-interactive-disabled-background);
+        border-color: var(--mox-color-interactive-disabled-border);
         cursor: not-allowed;
     }
     &.negative {
-        background: var(--button-negative-background-color);
-        border-color: var(--button-negative-border-color);
+        background: var(--mox-color-feedback-error-default);
         &:hover, &:focus-visible {
             background: var(--button-negative-hover-background-color);
             border-color: var(--button-negative-hover-border-color);
@@ -165,59 +186,35 @@ button {
             border-color: var(--button-negative-active-border-color);
         }  
     }
-    &.secondary {
-        background: var(--button-secondary-background-color);
-        border-color: var(--button-secondary-border-color);
-        color: var(--button-secondary-color);
-    }
 }
 
 /* Formulier: Label */
 label {
-    color: var(--form-field-label-color);
-    font-size: var(--form-field-label-font-size);
-    font-weight: var(--form-field-label-font-weight);
-    &:not([type=checkbox], [type=radio]) {
-        margin-bottom: var(--space-block-xs);
-    }
+    display: block;
+    font: var(--mox-text-label);
 }
-.form-field-description {
-    color: var(--form-field-description-color);
-    font-size: var(--form-field-description-font-size);
-    margin-bottom: var(--space-block-xs);
+.form-field-helper-text {
+    color: var(--mox-color-text-subtle-1);
+    font: var(--mox-text-smalltext-default);
 }
 
 /* Formulier: Tekstinvoer */
 [type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url] {
-    border: var(--textbox-border-width) solid var(--textbox-border-color);
-    border-radius: var(--textbox-border-radius);
-    color: var(--textbox-color);
-    font-size: var(--textbox-font-size);
-    min-height: var(--pointer-target-min-block-size);
-    min-width: var(--pointer-target-min-inline-size);
-    padding: var(--textbox-padding-block-start) var(--textbox-padding-inline-start);
-    &:hover {
-        border-color: var(--textbox-hover-border-color);
-    }
-    &:focus {
-        outline: none;
-    }
-    &:focus-visible {
-        background: var(--focus-background-color);
-        outline: var(--border-focus);
-        outline-offset: var(--focus-outline-offset);
-    }
-    &:active {
-        border-color: var(--textbox-active-border-color);
-    }
-    &[aria-invalid] {
-        border-color: var(--form-field-invalid-border-color);
-        border-width: var(--form-field-invalid-border-width);
-    }
+    &:hover {}
+    &:focus {}
+    &:focus-visible {}
+    &:active {}
+    &[aria-invalid] {}
 }
 
 /* Formulier: Selectie */
-[type=checkbox] {}
+[type=checkbox], [type=checkbox] {
+    min-height: var(--mox-size-icon-sm);
+    min-width: var(--mox-size-icon-sm);
+    + label {
+        display: inline-block;
+    }
+}
 [type=radio] {}
 select {}
 select[multiple] {}
@@ -231,12 +228,15 @@ option {}
 .breadcrumb {
     ol {
         list-style: none;
-        padding: 0 var(--breadcrumb-padding-inline);
+        padding: 0;
         li {
             display: inline-block;
             &:not(:last-child)::after {
-                content: '/';
-                margin: 0 var(--space-inline-xs);
+                content: ' /';
+                margin: 0 var(--mox-space-padding-2xs);
+            }
+            &[aria-current="page"] {
+                font-weight: var(--mox-text-font-weight-bold);
             }
         }
     }

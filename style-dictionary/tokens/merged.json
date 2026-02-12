@@ -753,12 +753,12 @@
       "default": {
         "background": {
           "$type": "color",
-          "$value": "{color.neutraal.wit}",
+          "$value": "{color.accent.default}",
           "$description": "Ruststaat van klikbaar/tikbaar element"
         },
         "border": {
           "$type": "color",
-          "$value": "{color.lintblauw.500}",
+          "$value": "{color.interactive.default.background}",
           "$description": "Ruststaat van klikbaar/tikbaar element"
         },
         "text": {
@@ -770,17 +770,21 @@
           "$type": "color",
           "$value": "{color.interactive.default.text}",
           "$description": "Ruststaat van klikbaar/tikbaar element"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{color.background.default}"
         }
       },
       "hover": {
         "background": {
           "$type": "color",
-          "$value": "{color.neutraal.wit}",
+          "$value": "{color.donkerblauw.500}",
           "$description": "Staat bij aanwijzen met de muis"
         },
         "border": {
           "$type": "color",
-          "$value": "{color.donkerblauw.500}",
+          "$value": "{color.interactive.hover.background}",
           "$description": "Staat bij aanwijzen met de muis"
         },
         "text": {
@@ -797,7 +801,7 @@
       "active": {
         "background": {
           "$type": "color",
-          "$value": "{color.neutraal.wit}",
+          "$value": "{color.interactive.hover.background}",
           "$description": "Staat terwijl element ingedrukt is"
         },
         "border": {
@@ -831,12 +835,12 @@
       "disabled": {
         "background": {
           "$type": "color",
-          "$value": "{color.grijs.100}",
+          "$value": "{color.grijs.300}",
           "$description": "Inactief element"
         },
         "border": {
           "$type": "color",
-          "$value": "{color.grijs.600}",
+          "$value": "{color.interactive.disabled.background}",
           "$description": "Inactief element"
         },
         "text": {
@@ -848,12 +852,12 @@
       "selected": {
         "background": {
           "$type": "color",
-          "$value": "{color.neutraal.wit}",
+          "$value": "{color.hemelblauw.500}",
           "$description": "Ingeschakeld, aangevinkt, actief element"
         },
         "border": {
           "$type": "color",
-          "$value": "{color.hemelblauw.500}",
+          "$value": "{color.interactive.selected.background}",
           "$description": "Ingeschakeld, aangevinkt, actief element"
         },
         "text": {
@@ -1350,7 +1354,7 @@
         "$value": {
           "fontFamily": "{text.font-family.body}",
           "fontWeight": "{text.font-weight.semi-bold}",
-          "fontSize": "900px",
+          "fontSize": "{text.font-size.4xl}",
           "lineHeight": "{text.line-height.lg}"
         }
       },
@@ -1422,16 +1426,24 @@
         }
       }
     },
+    "label": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{text.font-family.body}",
+        "fontWeight": "{text.weight.semibold}",
+        "fontSize": "{text.font-size.md}",
+        "lineHeight": "{text.line-height.sm}",
+        "paragraphSpacing": "{typography.spacing.paragraph.default}"
+      }
+    },
     "smalltext": {
-      "default": {
-        "$type": "typography",
-        "$value": {
-          "fontFamily": "{text.font-family.body}",
-          "fontWeight": "{text.weight.default}",
-          "fontSize": "{text.font-size.sm}",
-          "lineHeight": "{text.line-height.sm}",
-          "paragraphSpacing": "{typography.spacing.paragraph.default}"
-        }
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{text.font-family.body}",
+        "fontWeight": "{text.weight.default}",
+        "fontSize": "{text.font-size.sm}",
+        "lineHeight": "{text.line-height.sm}",
+        "paragraphSpacing": "{typography.spacing.paragraph.default}"
       }
     },
     "font-weight": {
@@ -1451,22 +1463,42 @@
     "text-decoration": {
       "hyperlink": {
         "$type": "textDecoration",
-        "$value": "underline solid currentColor {border-width.md}"
+        "$value": "underline solid currentColor {border-width.xs}"
+      }
+    },
+    "code": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "monospace",
+        "fontWeight": "{text.font-weight.semi-bold}",
+        "fontSize": "{text.font-size.sm}"
       }
     }
   },
   "border-width": {
-    "sm": {
+    "1": {
       "$type": "borderWidth",
-      "$value": "{border-width.md} / 2"
+      "$value": "1"
     },
-    "md": {
+    "2": {
       "$type": "borderWidth",
       "$value": "2"
     },
+    "3": {
+      "$type": "borderWidth",
+      "$value": "3"
+    },
+    "xs": {
+      "$type": "borderWidth",
+      "$value": "{border-width.1}"
+    },
+    "md": {
+      "$type": "borderWidth",
+      "$value": "{border-width.2}"
+    },
     "lg": {
       "$type": "borderWidth",
-      "$value": "{border-width.sm} * 3"
+      "$value": "{border-width.3}"
     }
   },
   "space": {
@@ -1578,6 +1610,24 @@
     "5xl": {
       "$type": "spacing",
       "$value": "{space.64}"
+    },
+    "padding": {
+      "2xs": {
+        "$type": "spacing",
+        "$value": "{space.2xs}"
+      },
+      "xs": {
+        "$type": "spacing",
+        "$value": "{space.xs}"
+      },
+      "sm": {
+        "$type": "spacing",
+        "$value": "{space.sm}"
+      },
+      "md": {
+        "$type": "spacing",
+        "$value": "{space.md}"
+      }
     }
   },
   "typography": {
@@ -1641,13 +1691,9 @@
     }
   },
   "pointer-target": {
-    "min-block-size": {
+    "min-size": {
       "$type": "sizing",
-      "$value": "{size.48}"
-    },
-    "min-inline-size": {
-      "$type": "sizing",
-      "$value": "{size.48}"
+      "$value": "{size.md}"
     }
   },
   "page": {
@@ -1662,22 +1708,18 @@
       "$value": "25rem"
     }
   },
-  "focus": {
-    "outline-width": {
-      "$type": "borderWidth",
-      "$value": "{border-width.lg}"
-    },
-    "outline-offset": {
-      "$type": "spacing",
-      "$value": "{space.2}"
-    }
-  },
   "opacity": {
     "interactive": {
       "disabled": {
         "$type": "opacity",
         "$value": "50%"
       }
+    }
+  },
+  "focus": {
+    "outline": {
+      "$type": "other",
+      "$value": "{border-width.md} dotted {color.interactive.focus.outline}"
     }
   }
 }

@@ -13,6 +13,7 @@
         body {
             padding-bottom: 2rem;
         }
+        section { margin-bottom: 2rem; }
         div.info {
             background: #fdf;
             border: 1px solid #f0f;
@@ -37,170 +38,242 @@
 <main>
     
     <h1>MOx front-end componenten</h1>
-
-    <h2>Tekst elementen</h2>
-
-    <h1>Koptekst niveau 1</h1>
-
-    <h2>Koptekst niveau 2</h2>
-
-    <h3>Koptekst niveau 3</h3>
-
-    <h4>Koptekst niveau 4</h4>
-
-    <h5>Koptekst niveau 5</h5>
-
-    <h6>Koptekst niveau 6</h6>
-
-    <p class="intro">Dit is een introductie alinea. Deze maakt het mogelijk om de introductie van de rest van de tekst te onderscheiden.</p>
-
-    <p>Dit is een standaard alinea met lopende tekst en <strong>tekst met sterke nadruk</strong>, <em>tekst met klemtoon</em> en <strong><em>tekst met sterke nadruk én klemtoon</em></strong>. Deze gebruiken hiervoor de semantische HTML elementen <code>&lt;strong&gt;</code> en <code>&lt;em&gt;</code>. Gebruik <code>&lt;b&gt;</code> om teksten <b>visueel vetgedrukt te maken</b>, <code>&lt;i&gt;</code> om teksten <i>visueel cursief te zetten</i> en <code>&lt;b&gt;&lt;i&gt;</code>om teksten <b><i>vetgedrukt én cursief te zetten</i></b> zonder semantische betekenis hieraan te geven.</p>
-
-    <p><small>Dit is kleine tekst.</small></p>
-
-    <p><mark>Dit is gemarkeerde tekst.</mark></p>
-
-    <p><del>Dit is doorgestreepte tekst.</del></p>
-
-    <p><ins>Dit is ingevoegde tekst.</ins></p>
-
-    <p><sub>subscript</sub> en <sup>superscript</sup> voor bijvoorbeeld een wiskundige formule als x<sup>2</sup><sub>n</sub> + y<sup>2</sup><sub>n</sub> = r<sup>2</sup></p>
-
-    <p>Dit is een <a href="#">hyperlink</a> in een zin.</p>
-
-    <p>Dit is <code>inline code</code> in een zin.</p>
-
-    <p>Dit is een <abbr title="afkorting">afk.</abbr> in een zin.</p>
     
-    <p><kbd>Ctrl</kbd> + <kbd>S</kbd> om op te slaan.</p>
+    <article>
     
-    <p>Het resultaat is <samp>voorbeelduitvoer</samp>.</p>
-    
-    <p>De variabele <var>x</var> staat voor een onbekende waarde.</p>
+        <section>
 
-    <blockquote>
-    <p>Dit is een citaat. De beste manier om de toekomst te voorspellen is om deze zelf te creëren.</p>
-    </blockquote>
+            <h2>Tekst elementen</h2>
 
-    <pre>Dit is voorgeformatteerde tekst.
-        Spaties en regelovergangen
-        worden behouden.</pre>
+            <h1>Koptekst niveau 1</h1>
 
-    <pre><code>// Dit is een codeblok
-    function groet(naam) {
-    return `Hallo, ${naam}!`;
-    }</code></pre>
+            <h2>Koptekst niveau 2</h2>
 
-    <ul>
-    <li>Eerste item in een ongeordende lijst</li>
-    <li>Tweede item in een ongeordende lijst</li>
-    <li>Derde item in een ongeordende lijst</li>
-    </ul>
+            <h3>Koptekst niveau 3</h3>
 
-    <ol>
-    <li>Eerste item in een geordende lijst</li>
-    <li>Tweede item in een geordende lijst</li>
-    <li>Derde item in een geordende lijst</li>
-    </ol>
+            <h4>Koptekst niveau 4</h4>
 
-    <dl>
-    <dt>Definitieterm</dt>
-    <dd>Dit is de beschrijving van de definitieterm.</dd>
-    <dt>Tweede term</dt>
-    <dd>Dit is de beschrijving van de tweede term.</dd>
-    </dl>
+            <h5>Koptekst niveau 5</h5>
 
-    <figure>
-    <figcaption>Dit is een bijschrift bij een afbeelding.</figcaption>
-    </figure>
+            <h6>Koptekst niveau 6</h6>
 
-    <details>
-    <summary>Klik hier voor meer informatie</summary>
-    <p>Dit is de verborgen inhoud die zichtbaar wordt na het klikken.</p>
-    </details>
+        </section>
 
-    <address>
-    Contactgegevens<br>
-    Voorbeeldstraat 1<br>
-    1234 AB Den Haag
-    </address>
+        <section>
 
-    <hr>
+            <h2>Paragraaf tekst</h2>
 
-    <time datetime="2026-02-12">12 februari 2026</time>
-    
-    <h2>Knoppen</h2>
-    
-    <form>
+            <p class="intro">Dit is een introductie alinea. Deze maakt het mogelijk om de introductie van de rest van de tekst te onderscheiden.</p>
 
-        <fieldset>
-
-            <button type="button">Standaard primaire knop</button>
-            
-            <button type="reset">Reset knop</button>
-            
-            <button type="submit">Submit knop</button>
-            
-            <button aria-disabled>Inactieve knop</button>
-            
-            <button class="negative">Destructieve actie</button>
-            
-            <button type="button">
-                Knop met <b>tekst</b> <i>stijlen</i>
-            </button>
-            
-            <button type="button">
-                <span>⚑</span> Knop met icoon voor tekst
-            </button>
-            
-            <!-- <button type="button">
-                Knop met icoon achter tekst <span>☀︎</span>
-            </button> -->
-
-            <button type="button" class="secondary">Secundaire knop</button>
-
-            <div class="info">ℹ️ Work in progress, de interactieve staten van deze knop zijn niet gedefinieerd in de rijkshuisstijl</div>
-
-        </fieldset>
-
-        <div class="space-xl"></div>
-
-        <h2>Tekst invoer</h2>
-        <div class="space-md"></div>
+            <p>Dit is een standaard alinea met lopende tekst en <strong>tekst met sterke nadruk</strong>, <em>tekst met klemtoon</em> en <strong><em>tekst met sterke nadruk én klemtoon</em></strong>. Deze gebruiken hiervoor de semantische HTML elementen <code>&lt;strong&gt;</code> en <code>&lt;em&gt;</code>. Gebruik <code>&lt;b&gt;</code> om teksten <b>visueel vetgedrukt te maken</b>, <code>&lt;i&gt;</code> om teksten <i>visueel cursief te zetten</i> en <code>&lt;b&gt;&lt;i&gt;</code>om teksten <b><i>vetgedrukt én cursief te zetten</i></b> zonder semantische betekenis hieraan te geven.</p>
         
-        <fieldset>
+        </section>
+
+        <section>
+
+            <h2>Inline tekst elementen</h2>
+
+            <p><small>Dit is kleine tekst.</small></p>
+
+            <p><mark>Dit is gemarkeerde tekst.</mark></p>
+
+            <p><del>Dit is doorgestreepte tekst.</del></p>
+
+            <p><ins>Dit is ingevoegde tekst.</ins></p>
+
+            <p><sub>subscript</sub> en <sup>superscript</sup> voor bijvoorbeeld een wiskundige formule als x<sup>2</sup><sub>n</sub> + y<sup>2</sup><sub>n</sub> = r<sup>2</sup></p>
+
+            <p>Dit is een <a href="#">hyperlink</a> in een zin.</p>
+
+            <p>Dit is <code>inline code</code> in een zin.</p>
+
+            <p>Dit is een <abbr title="afkorting">afk.</abbr> in een zin.</p>
+            
+            <p><kbd>Ctrl</kbd> + <kbd>S</kbd> om op te slaan.</p>
+            
+            <p>Het resultaat is <samp>voorbeelduitvoer</samp>.</p>
+            
+            <p>De variabele <var>x</var> staat voor een onbekende waarde.</p>
+
+            <p><time datetime="2026-02-12">12 februari 2026</time></p>
+
+        </section>
+
+        <section>
+
+            <h2>Block-level tekst elementen</h2>
+        
+            <blockquote>
+                <p>Dit is een citaat. De beste manier om de toekomst te voorspellen is om deze zelf te creëren.</p>
+            </blockquote>
+
+            <pre>Dit is voorgeformatteerde tekst.
+                Spaties en regelovergangen
+                worden behouden.</pre>
+
+            <pre><code>// Dit is een codeblok
+function groet(naam) {
+    return `Hallo, ${naam}!`;
+}</code></pre>
+
+        </section>
+
+        <section>
+
+            <h2>Overige tekst elementen</h2>
+
+            <address>
+                Contactgegevens<br>
+                Voorbeeldstraat 1<br>
+                1234 AB Den Haag
+            </address>
+
+        </section>
+
+    </article>
+
+    <article>
+
+        <section>
+
+            <h2>Lijsten</h2>
+
+            <ul>
+                <li>Eerste item in een ongeordende lijst</li>
+                <li>Tweede item in een ongeordende lijst</li>
+                <li>Derde item in een ongeordende lijst</li>
+            </ul>
+
+                <ol>
+                <li>Eerste item in een geordende lijst</li>
+                <li>Tweede item in een geordende lijst</li>
+                <li>Derde item in een geordende lijst</li>
+            </ol>
+
+                <dl>
+                <dt>Definitieterm</dt>
+                <dd>Dit is de beschrijving van de definitieterm.</dd>
+                <dt>Tweede term</dt>
+                <dd>Dit is de beschrijving van de tweede term.</dd>
+            </dl>
+
+        </section>
+
+    </article>
+
+    <article>
+
+        <section>
+
+            <h2>Media (afbeeldingen, audio, video)</h2>
+
+            <figure>
+                <figcaption>Dit is een bijschrift bij een afbeelding.</figcaption>
+            </figure>
+
+        </section>
+
+    </article>
+    
+    <article>
+
+        <section>
+            
+            <h2>Interactie elementen</h2>
+
+            <details>
+                <summary>Klik hier voor meer informatie</summary>
+                <p>Dit is de verborgen inhoud die zichtbaar wordt na het klikken.</p>
+            </details>
+
+        </section>
+    
+    </article>
+
+    
+
+ <article>
+
+        <section>
+    
+            <h2>Knoppen</h2>
+
+                <button type="button">Standaard primaire knop</button>
+                
+                <button type="reset">Reset knop</button>
+                
+                <button type="submit">Submit knop</button>
+                
+                <button aria-disabled>Inactieve knop</button>
+                
+                <button class="negative">Destructieve actie</button>
+                
+                <button type="button">
+                    Knop met <b>tekst</b> <i>stijlen</i>
+                </button>
+                
+                <button type="button">
+                    <span>⚑</span> Knop met icoon voor tekst
+                </button>
+                
+                <!-- <button type="button">
+                    Knop met icoon achter tekst <span>☀︎</span>
+                </button> -->
+
+                <button type="button" class="secondary">Secundaire knop</button>
+
+                <div class="info">ℹ️ Work in progress, de interactieve staten van deze knop zijn niet gedefinieerd in de rijkshuisstijl</div>
+
+        </section>
+
+        <section>
+
+            <h2>Tekst invoer</h2>
 
             <label for="input-text">Standaard tekstinvoerveld</label>
-            <div class="form-field-description" id="input-text--helper-text">Optionele ondersteunende help tekst indien nodig, bijvoorbeeld een hint over het verwachte formaat van invoer.</div>
+            <p class="form-field-helper-text" id="input-text--helper-text">Optionele ondersteunende help tekst indien nodig, bijvoorbeeld een hint over het verwachte formaat van invoer.</p>
             <input type="text" id="input-text" aria-describedby="input-text--helper-text" placeholder="Placeholder tekst">
 
-            <div class="space-xl"></div>
-
             <label for="input-email">E-mailadres</label>
-            <div class="form-field-description" id="emailadress--helper-text">Optionele ondersteunende help tekst indien nodig, bijvoorbeeld een hint over het verwachte formaat van invoer.</div>
+            <p class="form-field-helper-text" id="emailadress--helper-text">Optionele ondersteunende help tekst indien nodig, bijvoorbeeld een hint over het verwachte formaat van invoer.</p>
             <input type="email" id="input-email" aria-describedby="emailadress--helper-text" placeholder="voorbeeld@rijksoverheid.nl">
 
-             <div class="space-xl"></div>
-
             <label for="input-invalid">Foutieve invoer</label>
-            <div class="form-field-description" id="input-invalid--helper-text">Optionele ondersteunende help tekst indien nodig, bijvoorbeeld een hint over het verwachte formaat van invoer.</div>
+            <p class="form-field-helper-text" id="input-invalid--helper-text">Optionele ondersteunende help tekst indien nodig, bijvoorbeeld een hint over het verwachte formaat van invoer.</p>
             <input type="text" id="input-invalid" aria-describedby="input-invalid--helper-text" placeholder="voorbeeld@rijksoverheid.nl" aria-invalid>
           
-        </fieldset>
-    </form>
+        </section>
 
-    <div class="space-xl"></div>
+         <section>
 
-    <h2>Breadcrumb</h2>
-    <div class="space-md"></div>
+            <h2>Selecties</h2>
 
-    <nav class="breadcrumb">
-        <ol>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Componenten</a></li>
-            <li aria-current="page">Breadcrumb</li>
-        </ol>
-    </nav>
+            <input type="checkbox" id="input-checkbox-1">
+            <label for="input-checkbox-1">Standaard tekstinvoerveld</label>
+
+        </section>
+
+    </article>
+
+    <article>
+        
+        <h2>Navigatie</h2>
+
+        <section>
+
+            <h3>Breadcrumb</h3>
+
+            <nav class="breadcrumb">
+                <ol>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Componenten</a></li>
+                    <li aria-current="page">Breadcrumb</li>
+                </ol>
+            </nav>
+
+        </section>
+
+    </article>
 
 </main>
 
