@@ -174,8 +174,7 @@
     --mox-border-radius-none: 0px;
     --mox-border-radius-sm: 2.5px;
     --mox-border-radius-md: 5px;
-    --mox-border-width-sm: 1px;
-    --mox-border-width-md: 2px;
+1    --mox-border-width-md: 2px;
     --mox-border-width-none: 0px;
 
     /* === COMMON (SEMANTIC) TOKENS (lv 2) ===

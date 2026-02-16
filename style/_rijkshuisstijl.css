@@ -1,7 +1,7 @@
 /**
  * Automatisch gegenereerd op basis van design tokens.
  * De bron is tokens.json uit de MOx repository.
- * Gegenereerd op 12-2-2026, 20:17:19
+ * Gegenereerd op 16-2-2026, 19:22:12
  * _rijkshuisstijl.css bevat opties uit de Rijkshuisstijl, _mox.css bevat de toepassing van deze opties. Refereer in het CSS bestand alleen aan de variabelen in _mox.css, niet aan die in _rijkshuisstijl.css.
  * CSS variabelen worden automatisch gegenereerd, bewerk deze niet handmatig.
  */
@@ -74,12 +74,14 @@
   --rijkshuisstijl-color-groen-400: #6aa549; /** Groen 75% */
   --rijkshuisstijl-color-groen-50: #e1eddb; /** Groen 15% */
   --rijkshuisstijl-color-groen-500: #39870c; /** Groen 100% */
+  --rijkshuisstijl-color-groen-600: #2e6c0a; /** Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor. */
   --rijkshuisstijl-color-hemelblauw-100: #b3d7ee; /** Hemelblauw 30% */
   --rijkshuisstijl-color-hemelblauw-200: #8cc3e6; /** Hemelblauw 45% */
   --rijkshuisstijl-color-hemelblauw-300: #66afdd; /** Hemelblauw 60% */
   --rijkshuisstijl-color-hemelblauw-400: #409cd5; /** Hemelblauw 75% */
   --rijkshuisstijl-color-hemelblauw-50: #d9ebf7; /** Hemelblauw 15% */
   --rijkshuisstijl-color-hemelblauw-500: #007bc7; /** Hemelblauw 100% */
+  --rijkshuisstijl-color-hemelblauw-600: #00629f; /** Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor. */
   --rijkshuisstijl-color-lichtblauw-100: #ddeff8; /** Lichtblauw 30% */
   --rijkshuisstijl-color-lichtblauw-200: #cce7f4; /** Lichtblauw 45% */
   --rijkshuisstijl-color-lichtblauw-300: #bcdff0; /** Lichtblauw 60% */
@@ -92,6 +94,7 @@
   --rijkshuisstijl-color-lintblauw-400: #4f7196; /** Lintblauw 75% */
   --rijkshuisstijl-color-lintblauw-50: #dce3ea; /** Lintblauw 15% */
   --rijkshuisstijl-color-lintblauw-500: #154273; /** Lintblauw 100% */
+  --rijkshuisstijl-color-lintblauw-600: #11355c; /** Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor. */
   --rijkshuisstijl-color-mintgroen-100: #d6f2e9; /** Mintgroen 30% */
   --rijkshuisstijl-color-mintgroen-200: #c1ebde; /** Mintgroen 45% */
   --rijkshuisstijl-color-mintgroen-300: #ace4d3; /** Mintgroen 60% */
@@ -114,6 +117,7 @@
   --rijkshuisstijl-color-oranje-400: #e89440; /** Oranje 75% */
   --rijkshuisstijl-color-oranje-50: #fbead9; /** Oranje 15% */
   --rijkshuisstijl-color-oranje-500: #e17000; /** Oranje 100% */
+  --rijkshuisstijl-color-oranje-600: #b45a00; /** Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor. */
   --rijkshuisstijl-color-paars-100: #c6b9cf; /** Paars 30% */
   --rijkshuisstijl-color-paars-200: #a995b7; /** Paars 45% */
   --rijkshuisstijl-color-paars-300: #8d729f; /** Paars 60% */
@@ -131,7 +135,8 @@
   --rijkshuisstijl-color-rood-300: #e67f78; /** Rood 60% */
   --rijkshuisstijl-color-rood-400: #df6056; /** Rood 75% */
   --rijkshuisstijl-color-rood-50: #f9dfdd; /** Rood 15% */
-  --rijkshuisstijl-color-rood-500: #d52b1e; /** Rood 100%^ */
+  --rijkshuisstijl-color-rood-500: #d52b1e; /** Rood 100% */
+  --rijkshuisstijl-color-rood-600: #aa2218; /** Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor. */
   --rijkshuisstijl-color-roze-100: #fbdef0; /** Roze 30% */
   --rijkshuisstijl-color-roze-200: #f8cee8; /** Roze 45% */
   --rijkshuisstijl-color-roze-300: #f6bde1; /** Roze 60% */

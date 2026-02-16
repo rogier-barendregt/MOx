@@ -31,6 +31,12 @@
         "$type": "color",
         "$value": "#154273",
         "$description": "Lintblauw 100%"
+      },
+      "600": {
+        "parent": "core/default",
+        "$type": "color",
+        "$value": "#11355c",
+        "$description": "Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor."
       }
     },
     "paars": {
@@ -206,7 +212,13 @@
         "parent": "core/default",
         "$type": "color",
         "$value": "#d52b1e",
-        "$description": "Rood 100%^"
+        "$description": "Rood 100%"
+      },
+      "600": {
+        "parent": "core/default",
+        "$type": "color",
+        "$value": "#aa2218",
+        "$description": "Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor."
       }
     },
     "oranje": {
@@ -242,6 +254,12 @@
         "$type": "color",
         "$value": "#e17000",
         "$description": "Oranje 100%"
+      },
+      "600": {
+        "parent": "core/default",
+        "$type": "color",
+        "$value": "#b45a00",
+        "$description": "Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor."
       }
     },
     "donkergeel": {
@@ -452,6 +470,12 @@
         "$type": "color",
         "$value": "#39870c",
         "$description": "Groen 100%"
+      },
+      "600": {
+        "parent": "core/default",
+        "$type": "color",
+        "$value": "#2e6c0a",
+        "$description": "Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor."
       }
     },
     "mosgroen": {
@@ -592,6 +616,12 @@
         "$type": "color",
         "$value": "#007bc7",
         "$description": "Hemelblauw 100%"
+      },
+      "600": {
+        "parent": "core/default",
+        "$type": "color",
+        "$value": "#00629f",
+        "$description": "Deze kleur is geen onderdeel van rijkshuisstijl. Een donkere kleur is nodig om foutieve interactie en feedback staten weer te geven, de huidige opties bieden onvoldoende contrast hiervoor."
       }
     },
     "lichtblauw": {
@@ -779,7 +809,7 @@
       "hover": {
         "background": {
           "$type": "color",
-          "$value": "{color.donkerblauw.500}",
+          "$value": "{color.lintblauw.600}",
           "$description": "Staat bij aanwijzen met de muis"
         },
         "border": {
@@ -789,7 +819,7 @@
         },
         "text": {
           "$type": "color",
-          "$value": "{color.donkerblauw.500}",
+          "$value": "{color.lintblauw.600}",
           "$description": "Staat bij aanwijzen met de muis"
         },
         "icon": {
@@ -828,7 +858,7 @@
         },
         "outline": {
           "$type": "color",
-          "$value": "{color.lintblauw.500}",
+          "$value": "{color.lintblauw.600}",
           "$description": "Bij toetsenbord-, spraak-, en switchfocus"
         }
       },
@@ -887,15 +917,15 @@
         },
         "default": {
           "$type": "color",
-          "$value": "{color.groen.500}"
+          "$value": "{color.groen.400}"
         },
         "emphasis": {
           "$type": "color",
-          "$value": "{color.feedback.success.default}"
+          "$value": "{color.groen.500}"
         },
         "text": {
           "$type": "color",
-          "$value": "{color.feedback.success.default}"
+          "$value": "{color.groen.500}"
         },
         "border": {
           "$type": "color",
@@ -913,15 +943,15 @@
         },
         "default": {
           "$type": "color",
-          "$value": "{color.oranje.500}"
+          "$value": "{color.oranje.400}"
         },
         "emphasis": {
           "$type": "color",
-          "$value": "{color.feedback.warning.default}"
+          "$value": "{color.oranje.500}"
         },
         "text": {
           "$type": "color",
-          "$value": "{color.feedback.warning.default}"
+          "$value": "{color.oranje.500}"
         },
         "border": {
           "$type": "color",
@@ -943,11 +973,11 @@
         },
         "emphasis": {
           "$type": "color",
-          "$value": "{color.feedback.error.default}"
+          "$value": "{color.rood.600}"
         },
         "text": {
           "$type": "color",
-          "$value": "{color.feedback.error.default}"
+          "$value": "{color.rood.500}"
         },
         "border": {
           "$type": "color",
@@ -965,15 +995,15 @@
         },
         "default": {
           "$type": "color",
-          "$value": "{color.hemelblauw.500}"
+          "$value": "{color.hemelblauw.400}"
         },
         "emphasis": {
           "$type": "color",
-          "$value": "{color.feedback.info.default}"
+          "$value": "{color.hemelblauw.500}"
         },
         "text": {
           "$type": "color",
-          "$value": "{color.feedback.info.default}"
+          "$value": "{color.hemelblauw.500}"
         },
         "border": {
           "$type": "color",
@@ -991,7 +1021,7 @@
         },
         "default": {
           "$type": "color",
-          "$value": "{color.neutraal.gebroken-zwart}"
+          "$value": "{color.grijs.700}"
         },
         "emphasis": {
           "$type": "color",
@@ -1473,6 +1503,24 @@
         "fontWeight": "{text.font-weight.semi-bold}",
         "fontSize": "{text.font-size.sm}"
       }
+    },
+    "nav": {
+      "main-nav": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{text.font-family.default}",
+          "fontWeight": "{text.font-weight.semi-bold}",
+          "fontSize": "{text.font-size.2xl}"
+        }
+      },
+      "sub-nav": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{text.font-family.default}",
+          "fontWeight": "{text.font-weight.semi-bold}",
+          "fontSize": "{text.font-size.xl}"
+        }
+      }
     }
   },
   "border-width": {
@@ -1628,6 +1676,20 @@
         "$type": "spacing",
         "$value": "{space.md}"
       }
+    },
+    "margin": {
+      "sm": {
+        "$type": "spacing",
+        "$value": "{space.lg}"
+      },
+      "md": {
+        "$type": "spacing",
+        "$value": "{space.xl}"
+      },
+      "lg": {
+        "$type": "spacing",
+        "$value": "{space.2xl}"
+      }
     }
   },
   "typography": {
@@ -1719,7 +1781,14 @@
   "focus": {
     "outline": {
       "$type": "other",
-      "$value": "{border-width.md} dotted {color.interactive.focus.outline}"
+      "$value": "{border-width.lg} dotted {color.interactive.focus.outline}"
+    }
+  },
+  "transition": {
+    "default": {
+      "$type": "other",
+      "$value": "background .2s ease, border .2s ease, color .2s ease",
+      "$description": "Standaard transitie die toegepast wordt op alle CSS properties."
     }
   }
 }
