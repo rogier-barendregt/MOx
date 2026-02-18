@@ -155,7 +155,7 @@ console.log('Filtered transforms:', tsTransforms);
     platforms: {
       css: {
         // transformGroup: 'tokens-studio',
-        transforms: [  ...StyleDictionary.hooks.transformGroups['tokens-studio'], 'name/kebab', 'size/pxToRem', 'size/remToPxExceptions', 'name/prefix-set'],
+        transforms: [  ...StyleDictionary.hooks.transformGroups['tokens-studio'], 'name/kebab', 'size/pxToRem', 'size/remToPxExceptions', 'ts/resolveMath', 'name/prefix-set'],
         files: setNames.map(setName => ({
           destination: `../style/_${setName}.css`,
           format: 'css/variables-sorted',

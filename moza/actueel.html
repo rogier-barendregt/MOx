@@ -1,58 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: base.njk
+title: "MijnOverheid Zakelijk: Actualiteiten"
+bodyClass: moza
+headerType: overheid
+footerType: overheid
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MijnOverheid Zakelijk: Home</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <meta name="description" content="Rijkshuisstijl voorbeeld met design tokens">
-    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="192x192" href="../assets/favicon/touch-icon.png">
-    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
-</head>
+<aside>
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="/moza/">Home</a></li>
+            <li><a href="/moza/actueel/" aria-current="page">Actualiteiten</a></li>
+            <li><a href="#">Mijn Bedrijfsgegevens</a></li>
+        </ul>
+    </nav>
+</aside>
 
-<body class="moza">
+<article>
 
-    <header>
-        <figure class="logo">
-            <img src="../assets/images/beeldmerk-rijksoverheid.svg" alt="" />
-        </figure>
-        <div class="page-head">
-            <span class="page-title">MijnOverheid Zakelijk</span>
-            <div>
-                R.J. Vogel
-                <a href="#">Uitloggen</a>
-            </div>
-        </div>
-    </header>
+    <nav class="breadcrumb">
+        <ol>
+            <li><a href="/moza/">Home</a></li>
+            <li aria-current="page">Actualiteiten</li>
+        </ol>
+    </nav>
 
-    <main>
+    <h1>Actualiteiten</h1>
 
-        <aside>
-            <nav class="sub-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#" aria-current="page">Actualiteiten</a></li>
-                    <li><a href="#">Mijn Bedrijfsgegevens</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <section class="card">
+        <h3>Subsidies en financiering</h3>
+    </section>
 
-        <article>
-            <nav class="breadcrumb">
-                <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li aria-current="page">Actualiteiten</li>
-                </ol>
-            </nav>
-            <h1>Actualiteiten</h1>
-        </article>
-
-    </main>
-
-    <footer></footer>
-
-</body>
-
-</html>
+</article>

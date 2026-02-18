@@ -1,0 +1,14 @@
+<header>
+    <figure class="logo">
+        <img src="/assets/images/beeldmerk-rijksoverheid.svg" alt="">
+    </figure>
+    {% if mainNav %}
+    <nav class="main-nav">
+        <ul>
+            {% for item in mainNav %}
+            <li><a href="{{ item.url }}"{% if item.current %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    {% endif %}
+</header>

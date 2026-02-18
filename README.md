@@ -6,6 +6,56 @@
 2. [Installeer Style Dictionary](https://styledictionary.com/getting-started/using_the_cli/#installation) in `/style-dictionary`, deze vertaald design tokens naar CSS variabelen
 3. [Instaleer SD-Transforms](https://www.npmjs.com/package/@tokens-studio/sd-transforms#installation) in `/style-dictionary`, dit is een pakketje met extra transformatie-opties die nodig zijn om design tokens uit Figma [Tokens Studio](https://docs.tokens.studio/) te vertalen
 
+## Eleventy installeren
+
+[Eleventy](https://www.11ty.dev/) wordt gebruikt om herhalende componenten zoals headers en footers als includes te beheren. Installeer Eleventy in de root van het project:
+
+``` bash
+npm install @11ty/eleventy
+```
+
+### Pagina's bouwen
+
+Om de HTML pagina's te bouwen voer je dit commando uit vanuit de root van het project:
+
+``` bash
+npx @11ty/eleventy
+```
+
+De gebouwde pagina's worden in de `_site` map geplaatst.
+
+### Lokaal bekijken
+
+Start een lokale server met live reload:
+
+``` bash
+npx @11ty/eleventy --serve
+```
+
+De site is vervolgens te bekijken op `http://localhost:8080`.
+
+### Includes
+
+Herhalende componenten staan in de `_includes` map:
+
+| Bestand | Beschrijving |
+| ------- | ------------ |
+| `base.njk` | Basis layout met `<html>`, `<head>` en `<body>` |
+| `header-rijksoverheid.njk` | Standaard header met logo en optionele navigatie |
+| `header-overheid.njk` | MijnOverheid Zakelijk header |
+| `footer-overheid.njk` | MijnOverheid Zakelijk footer |
+
+Elke pagina selecteert zijn layout en opties via front matter bovenaan het bestand:
+
+``` yaml
+---
+layout: base.njk
+title: "Pagina titel"
+headerType: overheid
+footerType: overheid
+---
+```
+
 ## Design tokens vertalen naar CSS variabelen
 
 Om design tokens naar CSS variabelen om te zetten voer je dit commando uit vanuit de `style-dictionary` folder:

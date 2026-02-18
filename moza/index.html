@@ -1,59 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: base.njk
+title: "MijnOverheid Zakelijk: Home"
+bodyClass: moza
+headerType: overheid
+footerType: overheid
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MijnOverheid Zakelijk: Home</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <meta name="description" content="Rijkshuisstijl voorbeeld met design tokens">
-    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="192x192" href="../assets/favicon/touch-icon.png">
-    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
-</head>
+<aside>
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="/moza/" aria-current="page">Home</a></li>
+            <li><a href="/moza/actueel/">Actualiteiten</a></li>
+            <li><a href="#">Mijn Bedrijfsgegevens</a></li>
+        </ul>
+    </nav>
+</aside>
 
-<body class="moza">
+<article>
 
-    <header>
-        <figure class="logo">
-            <img src="../assets/images/beeldmerk-rijksoverheid.svg" alt="" />
-        </figure>
-        <div class="page-head">
-            <span class="page-title">MijnOverheid Zakelijk</span>
-            <div>
-                R.J. Vogel
-                <a href="#">Uitloggen</a>
-            </div>
-        </div>
-    </header>
+    <h1>Welkom R.J. Vogel</h1>
+    <h2>Actualiteiten</h2>
 
-    <main>
+    <section class="card">
+        <h3>Berichten uit uw buurt</h3>
+        <a class="btn-cta" href="#">Meer Berichten uit uw buurt</a>
+    </section>
 
-        <aside class="sub-nav">
-            <nav>
-                <ul>
-                    <li><a href="index.html" aria-current="page">Home</a></li>
-                    <li><a href="actueel.html">Actualiteiten</a></li>
-                    <li><a href="#">Mijn Bedrijfsgegevens</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <section class="card">
+        <h3>Subsidies en financiering</h3>
+        <a class="btn-cta" href="#">Meer Subsidies en financiering</a>
+    </section>
 
-        <article>
-            
-            <h1>Welkom R.J. Vogel</h1>
-            <h2>Actualiteit</h2>
+    <section class="card">
+        <h3>Wetten en regelgeving</h3>
+        <a class="btn-cta" href="#">Meer Wetten en regelgeving</a>
+    </section>
 
-            <section class="card">
-                <h3>Subsidies en financiering</h3>
-            </section>
+    <section class="card">
+        <h3>Veelgestelde vragen</h3>
+    </section>
 
-        </article>
-
-    </main>
-
-    <footer></footer>
-
-</body>
-
-</html>
+</article>

@@ -1,60 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOx design systeem: Layout</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <meta name="description" content="Rijkshuisstijl voorbeeld met design tokens">
-    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="192x192" href="../assets/favicon/touch-icon.png">
-    <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
-</head>
-<body>
-    
-<header>
-    <figure class="logo">
-        <img src="../assets/images/beeldmerk-rijksoverheid.svg" alt="">
-    </figure>
-    <nav class="main-nav">
+---
+layout: base.njk
+title: "MOx design systeem: Layout"
+mainNav:
+  - label: Home
+    url: "#"
+  - label: Pagina 1
+    url: "#"
+    current: true
+  - label: Pagina 2
+    url: "#"
+  - label: Pagina 3
+    url: "#"
+  - label: Pagina 4
+    url: "#"
+---
+
+<aside>
+    <nav class="sub-nav">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#" aria-current="page">Pagina 1</a></li>
-            <li><a href="#">Pagina 2</a></li>
-            <li><a href="#">Pagina 3</a></li>
-            <li><a href="#">Pagina 4</a></li>
+            <li><a href="#" aria-current="page">Sectie 1</a></li>
+            <li><a href="#">Sectie 2</a></li>
+            <li><a href="#">Sectie 3</a></li>
+            <li><a href="#">Sectie 4</a></li>
+            <li><a href="#">Sectie 5</a></li>
         </ul>
     </nav>
-</header>
+</aside>
 
-<main>
-
-    <aside>
-        <nav class="sub-nav">
-            <ul>
-                <li><a href="#" aria-current="page">Sectie 1</a></li>
-                <li><a href="#">Sectie 2</a></li>
-                <li><a href="#">Sectie 3</a></li>
-                <li><a href="#">Sectie 4</a></li>
-                <li><a href="#">Sectie 5</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <article>
-         <nav class="breadcrumb">
-            <ol>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pagina 1</a></li>
-                <li aria-current="page">Pagina 1.1</li>
-            </ol>
-        </nav>
-        <h1>Heading 1</h1>
-    </article>
-
-</main>
-
-<footer></footer>
-
-</body>
-</html>
+<article>
+     <nav class="breadcrumb">
+        <ol>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pagina 1</a></li>
+            <li aria-current="page">Pagina 1.1</li>
+        </ol>
+    </nav>
+    <h1>Heading 1</h1>
+</article>

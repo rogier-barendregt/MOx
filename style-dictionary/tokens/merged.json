@@ -783,7 +783,8 @@
       "default": {
         "background": {
           "$type": "color",
-          "$value": "{color.neutraal.transparent}"
+          "$value": "{color.accent.default}",
+          "$description": "Ruststaat van klikbaar/tikbaar element"
         },
         "border": {
           "$type": "color",
@@ -792,11 +793,13 @@
         },
         "text": {
           "$type": "color",
-          "$value": "{color.text.default}"
+          "$value": "{color.lintblauw.500}",
+          "$description": "Ruststaat van klikbaar/tikbaar element"
         },
         "icon": {
           "$type": "color",
-          "$value": "{color.interactive.default.text}"
+          "$value": "{color.interactive.default.text}",
+          "$description": "Ruststaat van klikbaar/tikbaar element"
         },
         "surface": {
           "$type": "color",
@@ -806,7 +809,8 @@
       "hover": {
         "background": {
           "$type": "color",
-          "$value": "{color.grijs.200}"
+          "$value": "{color.lintblauw.600}",
+          "$description": "Staat bij aanwijzen met de muis"
         },
         "border": {
           "$type": "color",
@@ -815,17 +819,20 @@
         },
         "text": {
           "$type": "color",
-          "$value": "{color.text.default}"
+          "$value": "{color.lintblauw.600}",
+          "$description": "Staat bij aanwijzen met de muis"
         },
         "icon": {
           "$type": "color",
-          "$value": "{color.interactive.default.text}"
+          "$value": "{color.interactive.hover.text}",
+          "$description": "Staat bij aanwijzen met de muis"
         }
       },
       "active": {
         "background": {
           "$type": "color",
-          "$value": "{color.grijs.400}"
+          "$value": "{color.interactive.hover.background}",
+          "$description": "Staat terwijl element ingedrukt is"
         },
         "border": {
           "$type": "color",
@@ -834,11 +841,13 @@
         },
         "text": {
           "$type": "color",
-          "$value": "{color.text.default}"
+          "$value": "{color.interactive.hover.text}",
+          "$description": "Staat terwijl element ingedrukt is"
         },
         "icon": {
           "$type": "color",
-          "$value": "{color.interactive.default.text}"
+          "$value": "{color.interactive.hover.icon}",
+          "$description": "Staat terwijl element ingedrukt is"
         }
       },
       "focus": {
@@ -873,7 +882,8 @@
       "selected": {
         "background": {
           "$type": "color",
-          "$value": "{color.hemelblauw.50}"
+          "$value": "{color.hemelblauw.500}",
+          "$description": "Ingeschakeld, aangevinkt, actief element"
         },
         "border": {
           "$type": "color",
@@ -882,11 +892,13 @@
         },
         "text": {
           "$type": "color",
-          "$value": "{color.donkerblauw.500}"
+          "$value": "{color.hemelblauw.500}",
+          "$description": "Ingeschakeld, aangevinkt, actief element"
         },
         "icon": {
           "$type": "color",
-          "$value": "{color.interactive.selected.text}"
+          "$value": "{color.interactive.selected.text}",
+          "$description": "Ingeschakeld, aangevinkt, actief element"
         }
       },
       "visited": {
@@ -1122,6 +1134,84 @@
         "$type": "color",
         "$value": "{color.lintblauw.500}"
       }
+    },
+    "component": {
+      "subnav": {
+        "default": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.neutraal.transparent}",
+            "$description": "Ruststaat van klikbaar/tikbaar element"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{color.text.default}",
+            "$description": "Ruststaat van klikbaar/tikbaar element"
+          },
+          "icon": {
+            "$type": "color",
+            "$value": "{color.component.subnav.default.text}",
+            "$description": "Ruststaat van klikbaar/tikbaar element"
+          }
+        },
+        "hover": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.grijs.200}",
+            "$description": "Staat bij aanwijzen met de muis"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{color.component.subnav.default.text}",
+            "$description": "Staat bij aanwijzen met de muis"
+          },
+          "icon": {
+            "$type": "color",
+            "$value": "{color.component.subnav.hover.text}",
+            "$description": "Staat bij aanwijzen met de muis"
+          }
+        },
+        "active": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.grijs.400}",
+            "$description": "Staat terwijl element ingedrukt is"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{color.component.subnav.default.text}",
+            "$description": "Staat terwijl element ingedrukt is"
+          },
+          "icon": {
+            "$type": "color",
+            "$value": "{color.component.subnav.active.text}",
+            "$description": "Staat terwijl element ingedrukt is"
+          }
+        },
+        "selected": {
+          "background": {
+            "$type": "color",
+            "$value": "{color.hemelblauw.50}",
+            "$description": "Ingeschakeld, aangevinkt, actief element"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{color.interactive.selected.text}",
+            "$description": "Ingeschakeld, aangevinkt, actief element"
+          },
+          "icon": {
+            "$type": "color",
+            "$value": "{color.component.subnav.selected.text}",
+            "$description": "Ingeschakeld, aangevinkt, actief element"
+          }
+        }
+      },
+      "footer": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.grijs.700}"
+        }
+      }
     }
   },
   "size": {
@@ -1278,9 +1368,13 @@
         "$value": "{size.48}"
       }
     },
-    "width": {
-      "$type": "sizing",
-      "$value": "{size.64} * 3"
+    "component": {
+      "subnav": {
+        "width": {
+          "$type": "sizing",
+          "$value": "208"
+        }
+      }
     }
   },
   "text": {
@@ -1317,7 +1411,7 @@
       },
       "sm": {
         "$type": "fontSizes",
-        "$value": "roundTo({text.font-size.base} / 1.3, 0)"
+        "$value": "{text.font-size.base} / 1.125"
       },
       "md": {
         "$type": "fontSizes",
@@ -1325,7 +1419,7 @@
       },
       "lg": {
         "$type": "fontSizes",
-        "$value": "roundTo({text.font-size.base} * 1.1, 0)"
+        "$value": "{text.font-size.base} * 1.125"
       },
       "xl": {
         "$type": "fontSizes",
@@ -1510,7 +1604,15 @@
         "$value": {
           "fontFamily": "{text.font-family.default}",
           "fontWeight": "{text.font-weight.regular}",
-          "fontSize": "{text.font-size.lg}"
+          "fontSize": "{text.font-size.md}"
+        }
+      },
+      "footer": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{text.font-family.default}",
+          "fontWeight": "{text.font-weight.regular}",
+          "fontSize": "{text.font-size.sm}"
         }
       }
     }
@@ -1742,6 +1844,17 @@
         "color": "#000000",
         "type": "dropShadow"
       }
+    },
+    "default": {
+      "$type": "boxShadow",
+      "$value": {
+        "x": "0",
+        "y": "0",
+        "blur": "6",
+        "spread": "0",
+        "color": "{color.grijs.400}",
+        "type": "dropShadow"
+      }
     }
   },
   "pointer-target": {
@@ -1754,12 +1867,6 @@
     "max-inline-size": {
       "$type": "sizing",
       "$value": "1140"
-    }
-  },
-  "form-control": {
-    "max-inline-size": {
-      "$type": "sizing",
-      "$value": "25rem"
     }
   },
   "opacity": {
@@ -1787,13 +1894,18 @@
     "card": {
       "default": {
         "$type": "boxShadow",
-        "$value": {
-          "x": "0",
-          "y": "0",
-          "blur": "6",
-          "spread": "0",
-          "color": "{color.border.subtle}",
-          "type": "dropShadow"
+        "$value": "{box-shadow.default}"
+      }
+    },
+    "component": {
+      "pageheader": {
+        "border": {
+          "$type": "border",
+          "$value": {
+            "color": "{color.hemelblauw.500}",
+            "width": "{border-width.2}",
+            "style": "solid"
+          }
         }
       }
     }

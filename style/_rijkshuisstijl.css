@@ -1,7 +1,7 @@
 /**
  * Automatisch gegenereerd op basis van design tokens.
  * De bron is tokens.json uit de MOx repository.
- * Gegenereerd op 17-2-2026, 16:54:47
+ * Gegenereerd op 18-2-2026, 10:47:11
  * _rijkshuisstijl.css bevat opties uit de Rijkshuisstijl, _mox.css bevat de toepassing van deze opties. Refereer in het CSS bestand alleen aan de variabelen in _mox.css, niet aan die in _rijkshuisstijl.css.
  * CSS variabelen worden automatisch gegenereerd, bewerk deze niet handmatig.
  */
@@ -188,9 +188,9 @@
   --rijkshuisstijl-text-font-size-3xl: 2rem;
   --rijkshuisstijl-text-font-size-4xl: 2.5rem;
   --rijkshuisstijl-text-font-size-base: 1rem; /** Modifier voor de schaal van overige groottes. */
-  --rijkshuisstijl-text-font-size-lg: roundTo(1rem * 1.1, 0);
+  --rijkshuisstijl-text-font-size-lg: 1.125rem;
   --rijkshuisstijl-text-font-size-md: 1rem;
-  --rijkshuisstijl-text-font-size-sm: roundTo(1rem / 1.3, 0);
+  --rijkshuisstijl-text-font-size-sm: 0.8889rem;
   --rijkshuisstijl-text-font-size-xl: 1.25rem;
   --rijkshuisstijl-text-line-height-2xl: 1.25;
   --rijkshuisstijl-text-line-height-4xl: 1.25;

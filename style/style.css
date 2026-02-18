@@ -8,6 +8,7 @@
 @import '_reset.css';
 
 /* Importeer specifieke componenten */
+@import '_mox-component-pageheader.css';
 @import '_mox-component-sub-nav.css';
 
 
@@ -65,11 +66,16 @@ main {
        display: flex;
     }
     > article:first-of-type {
+        margin-bottom: var(--mox-space-margin-lg);
         padding: 0 var(--mox-space-padding-md);
         width: 100%;
     }
 }
-footer {}
+footer {
+    background: var(--mox-color-component-footer-background);
+    color: var(--mox-color-text-inverse);
+    padding: var(--mox-space-padding-md);
+}
 
 
 /* Typografie */
@@ -149,7 +155,7 @@ form {}
 
 fieldset {}
 
-button, input, select, textarea {
+button, input, select, textarea, a.btn-cta {
     background: var(--mox-color-interactive-default-surface);
     border: var(--mox-border-width-md) solid var(--mox-color-interactive-default-border);
     border-radius: var(--mox-border-radius-sm);
@@ -192,7 +198,7 @@ legend, label {
 
 /* Knoppen */
 
-button {
+button, a.btn-cta {
     background: var(--mox-color-interactive-default-background);
     color: var(--mox-color-text-inverse);
     cursor: pointer;
@@ -229,6 +235,10 @@ button {
             border-color: var(--mox-color-interactive-active-border);
         }  
     }
+}
+a.btn-cta {
+    display: inline-block;
+    text-decoration: none;
 }
 
 /* Formulier: Tekstinvoer */
@@ -296,6 +306,9 @@ nav {
     ol, ul {
         list-style: none;
         padding: 0;
+        a {
+            text-decoration: none;
+        }
     }
 }
 
@@ -330,25 +343,25 @@ nav {
 
 .sub-nav {
     padding: 0 var(--mox-space-padding-md);
-    width: var(--mox-component-sub-nav-size-width);
+    width: var(--mox-size-component-subnav-width);
     li {
         a {
-            background: var(--mox-component-sub-nav-color-interactive-default-background);
+            background: var(--mox-color-component-subnav-default-background);
             border-radius: var(--mox-border-radius-md);
-            color: var(--mox-component-sub-nav-color-interactive-default-text);
+            color: var(--mox-color-component-subnav-default-text);
             display: block;
             font: var(--mox-text-nav-sub-nav);
             margin-bottom: var(--mox-space-padding-xs);
             padding: var(--mox-space-padding-2xs) var(--mox-space-padding-md);
             text-decoration: none;
             &:hover {
-                background: var(--mox-component-sub-nav-color-interactive-hover-background);
-                color: var(--mox-component-sub-nav-color-interactive-hover-textext);
+                background: var(---mox-color-component-subnav-hover-background);
+                color: var(--mox-color-component-subnav-default-text);
             }
         }
         [aria-current] {
-            background: var(--mox-component-sub-nav-color-interactive-selected-background);
-            color: var(--mox-component-sub-nav-color-interactive-selected-text);
+            background: var(--mox-color-component-subnav-selected-background);
+            color: var(--mox-color-component-subnav-selected-text);
             font-weight: var(--mox-text-font-weight-semi-bold);
         }
     }
@@ -369,6 +382,23 @@ nav {
     }
 }
 
+/* Navigatie: Footerlinks */
+
+footer {
+    a, a:hover {
+        color: inherit;
+        display: inline-block;
+        font: var(--mox-text-nav-footer);
+        padding: var(--mox-space-padding-xs) 0;
+    }
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: var(--mox-page-max-inline-size);
+}
+
 
 /* MijnOverheid Zakelijk */
 
@@ -378,7 +408,8 @@ body.moza {
 
 .moza header {
     background: var(--mox-color-background-default);
-    border-bottom: 2px solid var(--mox-color-interactive-default-border);
+    border: var(--mox-border-component-pageheader-border);
+    box-shadow: var(--mox-box-shadow-default);
 }
 .page-title {
     font: var(--mox-text-heading-h2);
@@ -395,7 +426,7 @@ body.moza {
 .moza article {
     display: flex;
     flex-direction: column;
-    gap: var(--mox-space-margin-xs);
+    row-gap: var(--mox-space-margin-sm);
 }
 
 .card {
