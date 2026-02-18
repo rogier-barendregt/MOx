@@ -54,6 +54,10 @@ header {
             }
         }
     }
+    .user-menu {
+        display: flex;
+        gap: var(--mox-space-padding-md);
+    }
 }
 .page-head {
     margin: 0 auto;
@@ -162,6 +166,7 @@ form {}
 fieldset {}
 
 button, input, select, textarea, a.btn-cta {
+    align-self: flex-start; /* Voorkomt dat elementen de volledige breedte aannemen in een flexbox container */
     background: var(--mox-color-interactive-default-surface);
     border: var(--mox-border-width-md) solid var(--mox-color-interactive-default-border);
     border-radius: var(--mox-border-radius-sm);
@@ -312,9 +317,6 @@ nav {
     ol, ul {
         list-style: none;
         padding: 0;
-        a {
-            text-decoration: none;
-        }
     }
 }
 
@@ -349,20 +351,23 @@ nav {
 
 .sub-nav {
     padding: 0 var(--mox-space-padding-md);
-    width: var(--mox-size-component-subnav-width);
     li {
+        width: var(--mox-size-component-subnav-width);
         a {
             background: var(--mox-color-component-subnav-default-background);
             border-radius: var(--mox-border-radius-md);
             color: var(--mox-color-component-subnav-default-text);
-            display: block;
             font: var(--mox-text-nav-sub-nav);
             margin-bottom: var(--mox-space-padding-xs);
             padding: var(--mox-space-padding-2xs) var(--mox-space-padding-md);
             text-decoration: none;
-            &:hover {
-                background: var(---mox-color-component-subnav-hover-background);
+            &:hover, &:focus {
+                background: var(--mox-color-component-subnav-hover-background);
                 color: var(--mox-color-component-subnav-default-text);
+            }
+            &:active {
+                background: var(--mox-color-component-subnav-active-background);
+                color: var(--mox-color-component-subnav-active-text);
             }
         }
         [aria-current] {
@@ -391,11 +396,15 @@ nav {
 /* Navigatie: Footerlinks */
 
 footer {
-    a, a:hover {
+    a {
         color: inherit;
         display: inline-block;
         font: var(--mox-text-nav-footer);
         padding: var(--mox-space-padding-xs) 0;
+        text-decoration: none;
+        &:hover {
+            color: inherit;
+        }
     }
 }
 .footer-links {
@@ -414,7 +423,7 @@ body.moza {
 
 .moza header {
     background: var(--mox-color-background-default);
-    border: var(--mox-border-component-pageheader-border);
+    border-bottom: var(--mox-border-component-pageheader-border);
     box-shadow: var(--mox-box-shadow-default);
 }
 .page-title {
@@ -440,5 +449,36 @@ body.moza {
     border: var(--mox-border-subtle);
     border-radius: var(--mox-border-radius-md);
     box-shadow: var(--mox-border-card-default);
+    display: flex;
+    flex-direction: column;
+    gap: var(--mox-space-padding-md);
     padding: var(--mox-space-padding-md) var(--mox-space-padding-md);
+    section {
+        padding: 0 0 var(--mox-space-padding-md);
+        &:not(:last-of-type) {
+            border-bottom: var(--mox-border-default);
+        }
+    }
+}
+
+/* Links en labels voorzien van SVG iconen */
+.icon-link, .icon-label {
+    align-items: start;
+    column-gap: var(--mox-space-padding-2xs);
+    display: flex;
+    svg {
+        height: var(--mox-size-icon-sm);
+    }
+}
+
+/* Badge component */
+.badge {
+    background: var(--mox-color-component-badge-background);
+    border-radius: var(--mox-border-radius-round);
+    color:var(--mox-color-component-badge-text);
+    font: var(--mox-text-component-text-badge);
+    height: var(--mox-size-icon-sm);
+    margin-left: auto;
+    text-align: center;
+    width: var(--mox-size-icon-sm);
 }

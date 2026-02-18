@@ -56,15 +56,31 @@ footerType: overheid
 ---
 ```
 
-## Design tokens vertalen naar CSS variabelen
+## NPM scripts
 
-Om design tokens naar CSS variabelen om te zetten voer je dit commando uit vanuit de `style-dictionary` folder:
+Installeer eerst de dependencies in de root van het project:
 
 ``` bash
-npm run build
+npm install
 ```
 
-Dit resulteert in wijzigingen in `_variables.css`. Dit variabelen bestand wordt automatisch geïmporteerd in de globale `style.css` style sheet.
+| Script | Commando | Beschrijving |
+| ------ | -------- | ------------ |
+| `npm run dev` | Eleventy serve + token watcher | Beide parallel, met live reload |
+| `npm run build` | Tokens + Eleventy | Volledige productie-build |
+| `npm run tokens` | Alleen Style Dictionary | Handmatig tokens bouwen |
+
+## Design tokens vertalen naar CSS variabelen
+
+Om design tokens handmatig naar CSS variabelen om te zetten:
+
+``` bash
+npm run tokens
+```
+
+Dit resulteert in wijzigingen in de CSS variabelen bestanden. Deze worden automatisch geïmporteerd in de globale `style.css` style sheet.
+
+Bij het gebruik van `npm run dev` worden design tokens automatisch opnieuw gebouwd wanneer `tokens/tokens.json` wijzigt.
 
 ## Structuur
 

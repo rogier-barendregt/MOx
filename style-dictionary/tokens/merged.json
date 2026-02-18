@@ -1211,6 +1211,16 @@
           "$type": "color",
           "$value": "{color.grijs.700}"
         }
+      },
+      "badge": {
+        "background": {
+          "$type": "color",
+          "$value": "{color.feedback.info.emphasis}"
+        },
+        "text": {
+          "$type": "color",
+          "$value": "{color.text.inverse}"
+        }
       }
     }
   },
@@ -1408,6 +1418,10 @@
         "$type": "fontSizes",
         "$value": "16",
         "$description": "Modifier voor de schaal van overige groottes."
+      },
+      "xs": {
+        "$type": "fontSizes",
+        "$value": "{text.font-size.base} / 1.25"
       },
       "sm": {
         "$type": "fontSizes",
@@ -1615,6 +1629,18 @@
           "fontSize": "{text.font-size.sm}"
         }
       }
+    },
+    "component": {
+      "text": {
+        "badge": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{text.font-family.body}",
+            "fontWeight": "{text.font-weight.bold}",
+            "fontSize": "{text.font-size.xs}"
+          }
+        }
+      }
     }
   },
   "border-width": {
@@ -1811,7 +1837,7 @@
     },
     "round": {
       "$type": "borderRadius",
-      "$value": "999"
+      "$value": "999px"
     },
     "sm": {
       "$type": "borderRadius",
@@ -1906,6 +1932,26 @@
             "width": "{border-width.2}",
             "style": "solid"
           }
+        }
+      }
+    },
+    "default": {
+      "$type": "border",
+      "$value": {
+        "width": "1px",
+        "style": "solid",
+        "color": "{color.grijs.300}"
+      }
+    }
+  },
+  "component": {
+    "text": {
+      "badge": {
+        "$type": "typography",
+        "$value": {
+          "fontFamily": "{text.font-family.body}",
+          "fontWeight": "{text.font-weight.bold}",
+          "fontSize": "{text.font-size.sm}"
         }
       }
     }

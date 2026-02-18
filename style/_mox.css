@@ -1,14 +1,16 @@
 /**
  * Automatisch gegenereerd op basis van design tokens.
  * De bron is tokens.json uit de MOx repository.
- * Gegenereerd op 18-2-2026, 10:47:12
+ * Gegenereerd op 18-2-2026, 18:04:13
  * _rijkshuisstijl.css bevat opties uit de Rijkshuisstijl, _mox.css bevat de toepassing van deze opties. Refereer in het CSS bestand alleen aan de variabelen in _mox.css, niet aan die in _rijkshuisstijl.css.
  * CSS variabelen worden automatisch gegenereerd, bewerk deze niet handmatig.
  */
 :root {
   --mox-border-card-default: var(--mox-box-shadow-default);
   --mox-border-component-pageheader-border: var(--rijkshuisstijl-border-width-2) solid var(--rijkshuisstijl-color-hemelblauw-500);
+  --mox-border-default: 1px solid var(--rijkshuisstijl-color-grijs-300);
   --mox-border-radius-md: var(--rijkshuisstijl-border-radius-4);
+  --mox-border-radius-round: 999px;
   --mox-border-radius-sm: var(--rijkshuisstijl-border-radius-2);
   --mox-border-width-lg: var(--rijkshuisstijl-border-width-3);
   --mox-border-width-md: var(--rijkshuisstijl-border-width-2);
@@ -24,6 +26,8 @@
   --mox-color-border-inverse: var(--rijkshuisstijl-color-grijs-200); /** Randen op color.*.inverse en donkere oppervlakken */
   --mox-color-border-strong: var(--rijkshuisstijl-color-grijs-700); /** Randen met hoge nadruk; bijv. invoervelden of visuele groepering */
   --mox-color-border-subtle: var(--rijkshuisstijl-color-grijs-400); /** Zachtere scheiding, bijv. tussen lijstitems of tabelrijen */
+  --mox-color-component-badge-background: var(--mox-color-feedback-info-emphasis);
+  --mox-color-component-badge-text: var(--mox-color-text-inverse);
   --mox-color-component-footer-background: var(--rijkshuisstijl-color-grijs-700);
   --mox-color-component-subnav-active-background: var(--rijkshuisstijl-color-grijs-400); /** Staat terwijl element ingedrukt is */
   --mox-color-component-subnav-active-icon: var(--mox-color-component-subnav-active-text); /** Staat terwijl element ingedrukt is */
@@ -97,6 +101,7 @@
   --mox-color-text-inverse: var(--rijkshuisstijl-color-neutraal-wit); /** Tekst op color.background.inverse of op color.feedback.*.emphasis-oppervlakken */
   --mox-color-text-subtle-1: var(--rijkshuisstijl-color-grijs-700); /** Secundaire tekst: beschrijvingen, hulptekst, bijschriften, tijdstempels */
   --mox-color-text-subtle-2: var(--rijkshuisstijl-color-grijs-600); /** Tertiaire tekst: placeholders, metadata */
+  --mox-component-text-badge: var(--mox-text-font-weight-bold) var(--rijkshuisstijl-text-font-size-sm) var(--mox-text-font-family-body);
   --mox-focus-outline: var(--mox-border-width-lg) dotted var(--mox-color-interactive-focus-outline);
   --mox-opacity-interactive-disabled: 0.5;
   --mox-page-max-inline-size: 71.25rem;
@@ -139,6 +144,7 @@
   --mox-space-xl: var(--rijkshuisstijl-space-32);
   --mox-space-xs: var(--rijkshuisstijl-space-8);
   --mox-text-code: var(--mox-text-font-weight-semi-bold) var(--rijkshuisstijl-text-font-size-sm) monospace;
+  --mox-text-component-text-badge: var(--mox-text-font-weight-bold) var(--rijkshuisstijl-text-font-size-xs) var(--mox-text-font-family-body);
   --mox-text-font-family-body: var(--rijkshuisstijl-text-font-family-default);
   --mox-text-font-weight-bold: var(--rijkshuisstijl-text-weight-bold);
   --mox-text-font-weight-regular: var(--rijkshuisstijl-text-weight-default);
