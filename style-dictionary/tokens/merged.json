@@ -892,7 +892,7 @@
         },
         "text": {
           "$type": "color",
-          "$value": "{color.hemelblauw.500}",
+          "$value": "{color.lintblauw.600}",
           "$description": "Ingeschakeld, aangevinkt, actief element"
         },
         "icon": {
@@ -1891,7 +1891,7 @@
       "card": {
         "padding": {
           "$type": "spacing",
-          "$value": "{space.padding.lg}"
+          "$value": "{space.padding.xl}"
         }
       }
     }
@@ -2029,7 +2029,7 @@
       "$value": {
         "width": "1px",
         "style": "solid",
-        "color": "{color.grijs.100}"
+        "color": "{color.grijs.200}"
       }
     }
   }

@@ -7,10 +7,6 @@
 /* Importeer reset stijlen */
 @import '_reset.css';
 
-/* Importeer specifieke componenten */
-@import '_mox-component-pageheader.css';
-@import '_mox-component-sub-nav.css';
-
 
 /* Voeg Rijksoverheid Sans lettertype toe */
 
@@ -221,6 +217,23 @@ legend, label {
     font: var(--mox-text-smalltext-default);
 }
 
+/* Actiegroep; groeperen van gerelateerde acties */
+.action-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mox-space-padding-md);
+    margin-top: var(--mox-space-margin-sm);
+    button, a.btn-cta {
+        width: 100%;
+    }
+    @media (min-width: 30em) {
+        flex-direction: row;
+        button, a.btn-cta {
+            width: initial;
+        }
+    }
+}
+
 /* Knoppen */
 
 button, a.btn-cta {
@@ -309,7 +322,7 @@ ul.selection {
     vertical-align: top;
     + label {
         display: inline-block;
-        padding-inline: var(--mox-space-padding-2xs);
+        padding-inline: var(--mox-space-padding-xs);
     }
     &[disabled] + label {
         color: var(--mox-color-interactive-disabled-text);
@@ -369,10 +382,14 @@ nav {
     li {
         inline-size: var(--mox-size-component-subnav-width);
         a {
+            align-items: center;
             background: var(--mox-color-interactive-alternate-default-background);
             border-radius: var(--mox-border-radius-md);
             color: var(--mox-color-interactive-alternate-default-text);
+            column-gap: var(--mox-space-padding-2xs);
+            display: flex;
             font: var(--mox-text-nav-sub-nav);
+            gap: var(--mox-space-padding-sm);
             margin-block-end: var(--mox-space-padding-xs);
             padding-block: var(--mox-space-padding-2xs);
             padding-inline: var(--mox-space-padding-md);
@@ -389,7 +406,10 @@ nav {
         [aria-current] {
             background: var(--mox-color-interactive-alternate-selected-background);
             color: var(--mox-color-interactive-alternate-selected-text);
-            font-weight: var(--mox-text-font-weight-semi-bold);
+                font-weight: var(--mox-text-font-weight-semi-bold);
+            }
+        svg {
+            block-size: var(--mox-size-icon-md);
         }
     }
 }
@@ -433,13 +453,20 @@ footer {
 
 /* Lijsten */
 
-ul, ol {}
+.list-plain {
+    list-style: none;
+    padding: 0;
+}
 li {
     margin-block-end: var(--mox-space-margin-2xs);
 }
 
 
 /* Tabellen */
+
+table {
+    width: 100%;
+}
 
 th, td {
     border-block-end: var(--mox-border-default);
@@ -490,7 +517,7 @@ summary {
     box-shadow: var(--mox-border-card-default);
     display: flex;
     flex-direction: column;
-    gap: var(--mox-space-padding-md);
+    gap: var(--mox-space-padding-lg);
     padding: var(--mox-space-component-card-padding);
     h3, h4 {
         font-size: var(--mox-text-size-title-xl);
@@ -503,14 +530,13 @@ summary {
         font-size: var(--mox-text-size-title-lg);
     }
     a:not(.btn-cta) {
-        color: var(--mox-color-text-default);
-        padding-block-end: var(--mox-space-padding-md);
+        padding-block-end: var(--mox-space-padding-lg);
         text-decoration: none;
         &:not(:last-of-type) {
             border-block-end: var(--mox-border-default);
         }
-        h3, h4 {
-            color: var(--mox-color-interactive-default-text);
+        p {
+            color: var(--mox-color-text-default);
         }
         &:hover {
             h3, h4 {
@@ -544,12 +570,15 @@ summary {
 
 /* Links en labels voorzien van SVG iconen */
 .icon-link, .icon-label {
-    align-items: start;
-    column-gap: var(--mox-space-padding-2xs);
-    display: flex;
     text-decoration: none;
     svg {
         block-size: var(--mox-size-icon-sm);
+    }
+}
+.icon-link {
+    &:hover {
+        color: var(--mox-color-interactive-hover-text);
+        text-decoration: underline !important;
     }
 }
 

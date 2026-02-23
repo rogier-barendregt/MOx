@@ -1,5 +1,6 @@
 ---
 title: "MijnOverheid Zakelijk: Contactvoorkeuren"
+permalink: "/contactvoorkeuren/"
 ---
 
 {% include "sub-nav-overheid.njk" %}
@@ -16,12 +17,15 @@ title: "MijnOverheid Zakelijk: Contactvoorkeuren"
     <h1>Contactvoorkeuren</h1>
 
     <section class="card">
+
         <h2>Contactgegevens</h2>
-        <p>Contactgegevens die u hier aanpast, worden automatisch bijgewerkt bij alle organisaties waarmee u uw gegevens centraal deelt.</p>
+
+        <p>Uw contactgegevens bij organisaties waarmee u uw gegevens centraal deelt.</p>
+        
         <table>
             <tr>
                 <td colspan="2">
-                    <a class="icon-link" href="#">
+                    <a class="icon-link" href="/contactvoorkeuren/contactgegevens-wijzigen/">
                         <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" baseProfile="tiny" version="1.2"
                             viewBox="0 0 24 24">
                             <path fill="none" d="M0 0h24v24H0z" />
@@ -41,11 +45,28 @@ title: "MijnOverheid Zakelijk: Contactvoorkeuren"
                 <td>(+31) (0)6 12 34 56 78</td>
             </tr>
         </table>
+
+        <h3>Aangesloten organisaties</h3>
+
+        <p>De geselecteerde organisaties gebruiken deze gegevens om contact met u op te nemen.</p>
+
+        <ul class="list-plain">
+            <li><input type="checkbox" id="moza-org-kvk" checked><label for="moza-org-kvk">Kamer van Koophandel (KVK)</label></li>
+            <li><input type="checkbox" id="moza-org-om"><label for="moza-org-om">Openbaar Ministerie (OM)</label></li>
+            <li><input type="checkbox" id="moza-org-rvo"><label for="moza-org-rvo">Rijksdienst voor Ondernemend Nederland (RVO)</label></li>
+            <li><input type="checkbox" id="moza-org-rdw"><label for="moza-org-rdw">Rijksdienst voor het Wegverkeer (RDW)</label></li>
+            <li><input type="checkbox" id="moza-org-svb"><label for="moza-org-svb">Sociale Verzekeringsbank (SVB)</label></li>
+            <li><input type="checkbox" id="moza-org-uwv"><label for="moza-org-uwv">Uitvoeringsinstituut Werknemersverzekeringen (UWV)</label></li>
+        </ul>
+
     </section>
 
     <section class="card">
+
         <h2>Communicatiekanalen</h2>
+
         <p>Hoe wilt u dat overheidsorganisaties standaard contact met u opnemen als dat nodig is?</p>
+
         <table>
             <tr>
                 <td colspan="2">
@@ -69,14 +90,19 @@ title: "MijnOverheid Zakelijk: Contactvoorkeuren"
                 <td>Ik wil niet gebeld worden</td>
             </tr>
         </table>
+
         <div class="feedback feedback-info">
             <p>De overheid stuurt automatisch een waarschuwing naar uw voorkeurskanaal indien een bericht 14 dagen ongelezen blijft.</p>
         </div>
+
     </section>
 
     <section class="card">
+
         <h2>Berichtgevingen</h2>
+
         <p>Lorem ipsum.</p>
+
         <table>
             <tr>
                 <td colspan="2">
@@ -107,6 +133,7 @@ title: "MijnOverheid Zakelijk: Contactvoorkeuren"
                 <td>E-mail</td>
             </tr>
         </table>
+
     </section>
 
     <div class="tiles">
