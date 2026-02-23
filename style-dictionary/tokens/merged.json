@@ -1891,7 +1891,7 @@
       "card": {
         "padding": {
           "$type": "spacing",
-          "$value": "{space.padding.xl}"
+          "$value": "{space.padding.lg}"
         }
       }
     }

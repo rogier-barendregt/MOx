@@ -94,7 +94,7 @@ main {
 footer {
     background: var(--mox-color-component-footer-background);
     color: var(--mox-color-text-inverse);
-    padding: var(--mox-space-padding-md);
+    padding: var(--mox-space-padding-xl) var(--mox-space-padding-md);
 }
 
 
@@ -486,15 +486,20 @@ summary {
 
 .card {
     background: var(--mox-color-background-default);
-    border: var(--mox-border-subtle);
     border-radius: var(--mox-border-radius-md);
     box-shadow: var(--mox-border-card-default);
     display: flex;
     flex-direction: column;
     gap: var(--mox-space-padding-md);
-    /* margin-block-end: var(--mox-space-margin-md); */
     padding: var(--mox-space-component-card-padding);
     h3, h4 {
+        font-size: var(--mox-text-size-title-xl);
+        margin-bottom: var(--mox-space-margin-2xs);
+        a {
+            color: var(--mox-color-interactive-default-text);
+        }
+    }
+    h4 {
         font-size: var(--mox-text-size-title-lg);
     }
     a:not(.btn-cta) {
@@ -503,6 +508,9 @@ summary {
         text-decoration: none;
         &:not(:last-of-type) {
             border-block-end: var(--mox-border-default);
+        }
+        h3, h4 {
+            color: var(--mox-color-interactive-default-text);
         }
         &:hover {
             h3, h4 {
@@ -516,7 +524,7 @@ summary {
 .tiles {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--mox-space-padding-xl);
+    gap: var(--mox-space-margin-sm);
     .card {
         display: flex;
         justify-content: space-between;
@@ -630,5 +638,5 @@ body.moza {
 .moza article {
     display: flex;
     flex-direction: column;
-    row-gap: var(--mox-space-margin-md);
+    row-gap: var(--mox-space-margin-sm);
 }
