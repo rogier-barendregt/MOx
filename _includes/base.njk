@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="{{ '/style/style.css' | url }}">
     <meta name="description" content="{{ description | default('MijnOverheid Zakelijk') }}">
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="192x192" href="/assets/favicon/touch-icon.png">
-    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | url }}" type="image/x-icon">
+    <link rel="icon" sizes="192x192" href="{{ '/assets/favicon/touch-icon.png' | url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/favicon/apple-touch-icon.png' | url }}">
     {% block extraStyles %}{% endblock %}
 </head>
 <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>

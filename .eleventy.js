@@ -16,6 +16,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("tokens");
 
     return {
+        pathPrefix: "/MOx/",
         dir: {
             input: ".",
             includes: "_includes",
