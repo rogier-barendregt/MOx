@@ -1,5 +1,5 @@
 .DS_Store
 style-dictionary/node_modules/*
 */.DS_Store
-_site/
 node_modules/
+*.crdownload
