@@ -657,6 +657,27 @@ summary {
 
 /* MijnOverheid Zakelijk */
 
+/* Proof of concept banner */
+.moza-poc-banner {
+    background: var(--mox-color-feedback-success-default);
+    color: var(--mox-color-text-inverse);
+    font-size: var(--mox-text-font-weight-bold);
+    margin-inline-start: -3rem;
+    padding: var(--mox-space-padding-sm) var(--mox-space-padding-lg);
+    position: fixed;
+    right: -4rem;
+    text-align: center;
+    text-decoration: none;
+    top: 2rem;
+    transform: rotate(45deg);
+    transform-origin: center;
+    width: 280px;
+    &:hover {
+        background: var(--mox-color-feedback-success-emphasis);
+        color: var(--mox-color-text-inverse);
+    }
+}
+
 body.moza {
     background: var(--mox-color-background-subtle);
 }
