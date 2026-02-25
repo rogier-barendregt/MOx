@@ -504,7 +504,10 @@ button.sub-nav-toggle {
 }
 .sub-nav ul {
 	@media (max-width: 799px) {
+		background: var(--mox-color-background-default);
 		display: none;
+		margin-block-end: var(--mox-space-margin-lg);
+		padding: var(--mox-space-padding-md);
 	}
 	li {
 		inline-size: 100%;
