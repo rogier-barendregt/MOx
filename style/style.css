@@ -177,7 +177,9 @@ pre {
 	transition: var(--mox-transition-default);
 }
 [aria-disabled] {
-	opacity: 0.6; /* Opacity gebruiken i.p.v. specifieke kleuren heeft diverse voordelen waaronder het automatisch aanpassen aan modus (donker/licht/hoog-contrast) en vergt minder onderhoud, nadeel: ook focus-ring (aria-disabled i.p.v. reguliere disabled attribuut maakt het juist mogelijk om focus te leggen op inactieve elementen zodat gebruikers die afhankelijk van :focus zijn alsnog inhoud en context begrijpen) wordt hierdoor semi-transparant */
+	opacity: var(
+		--mox-opacity-interactive-disabled
+	); /* Opacity gebruiken i.p.v. specifieke kleuren heeft diverse voordelen waaronder het automatisch aanpassen aan modus (donker/licht/hoog-contrast) en vergt minder onderhoud, nadeel: ook focus-ring (aria-disabled i.p.v. reguliere disabled attribuut maakt het juist mogelijk om focus te leggen op inactieve elementen zodat gebruikers die afhankelijk van :focus zijn alsnog inhoud en context begrijpen) wordt hierdoor semi-transparant */
 }
 
 /* Focus voor keyboard, spraak en switch gebruikers */
@@ -193,6 +195,13 @@ pre {
 	&.negative {
 		outline-color: var(--mox-color-feedback-error-border);
 	}
+}
+
+/* Opties die door gebruiker al goedgekeurd zijn en niet meer gewijzigd kunnen worden */
+.option--confirmed input[disabled] {
+	accent-color: var(
+		--mox-color-feedback-success-emphasis
+	); /* Werkt niet in Chromium */
 }
 
 /* Formulier elementen */
@@ -225,9 +234,6 @@ a.btn-cta {
 	&:active {
 		border-color: var(--mox-color-interactive-active-border);
 	}
-	/* &[aria-disabled] {
-        border-color: var(--mox-color-interactive-disabled-border);
-    } */
 	&[aria-invalid] {
 		border-color: var(--mox-color-feedback-error-border);
 	}
@@ -242,9 +248,9 @@ legend,
 label {
 	display: block;
 	font: var(--mox-text-label);
-	&:has(+ [aria-disabled]) {
-		opacity: 0.6;
-	}
+	/* &:has(+ [aria-disabled]) {
+		opacity: var(--mox-opacity-interactive-disabled);
+	} */
 }
 
 .form-field-helper-text {
@@ -253,6 +259,12 @@ label {
 }
 
 /* Actiegroep; groeperen van gerelateerde acties */
+.list-plain + .action-group {
+	display: none;
+}
+.list-plain:has(input:not([disabled]):checked) + .action-group {
+	display: flex;
+}
 .action-group {
 	display: flex;
 	flex-direction: column;
@@ -281,7 +293,8 @@ a.btn-cta {
 	span {
 		display: inline-block;
 	}
-	&.secondary {
+	&.secondary,
+	&[type="reset"] {
 		background: var(--mox-color-interactive-default-surface);
 		border-color: var(--mox-color-interactive-default-border);
 		color: var(--mox-color-interactive-default-text);
@@ -297,8 +310,6 @@ a.btn-cta {
 		border-color: var(--mox-color-interactive-active-border);
 	}
 	&[aria-disabled] {
-		/* background: var(--mox-color-interactive-disabled-background);
-        border-color: var(--mox-color-interactive-disabled-border); */
 		cursor: not-allowed;
 	}
 	&.negative {
@@ -368,15 +379,19 @@ ul.selection {
 }
 [type="checkbox"],
 [type="radio"] {
+	accent-color: var(--mox-color-interactive-default-background);
 	min-block-size: var(--mox-size-icon-md);
 	min-inline-size: var(--mox-size-icon-md);
 	transition: var(--mox-transition-default);
 	vertical-align: top;
+	&:hover {
+		accent-color: var(--mox-color-interactive-hover-background);
+	}
 	+ label {
 		display: inline-block;
 		padding-inline: var(--mox-space-padding-xs);
 	}
-	&[disabled] + label {
+	&[aria-disabled] + label {
 		color: var(--mox-color-interactive-disabled-text);
 	}
 }
@@ -767,13 +782,13 @@ body.moza {
 	margin-inline-start: -3rem;
 	padding: var(--mox-space-padding-sm) var(--mox-space-padding-lg);
 	position: fixed;
-	right: -4rem;
+	inset-inline-end: -4rem;
 	text-align: center;
 	text-decoration: none;
-	top: 2rem;
+	inset-block-start: 2rem;
 	transform: rotate(45deg);
 	transform-origin: center;
-	width: 280px;
+	inline-size: 280px;
 	&:hover {
 		background: var(--mox-color-feedback-success-emphasis);
 		color: var(--mox-color-text-inverse);
@@ -783,21 +798,25 @@ body.moza {
 /* Doorkijkjes navigatie */
 .temp-moza-subnav-preview {
 	display: flex;
-	opacity: 0.6;
+	opacity: var(--mox-opacity-interactive-disabled);
 	a {
 		padding-block: var(--mox-space-padding-2xs);
 		padding-inline: var(--mox-space-padding-md);
-		width: 100%;
+		inline-size: 100%;
 	}
 	&:not(:has(~ .temp-moza-subnav-preview)) {
 		border-block-end: var(--mox-border-default);
-		border-color: var(--mox-color-text-default);
+		border-color: var(--mox-color-interactive-disabled-border);
+		margin-block-end: var(--mox-space-margin-xs);
 	}
 }
 .temp-moza-subnav-preview-heading {
 	border-block-end: var(--mox-border-default);
-	border-color: var(--mox-color-text-default);
+	border-color: var(--mox-color-interactive-disabled-border);
 	font-style: italic;
-	margin-top: 1rem;
+	margin-block-start: 1rem;
 	padding: 0.5rem;
+}
+.temp-moza-disabled {
+	opacity: var(--mox-opacity-interactive-disabled);
 }

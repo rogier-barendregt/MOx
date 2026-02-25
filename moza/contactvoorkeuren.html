@@ -63,42 +63,49 @@ title: "MijnOverheid Zakelijk: Contactvoorkeuren"
 
 		<p>
 			De geselecteerde organisaties gebruiken deze gegevens om contact met u op
-			te nemen.
+			te nemen. Selecteert u een extra organisatie, dan gebruikt ook deze uw
+			centrale contactgegevens.
 		</p>
 
-		<ul class="list-plain">
-			<li>
-				<input type="checkbox" id="moza-org-kvk" checked /><label
-					for="moza-org-kvk"
-					>Kamer van Koophandel (KVK)</label
-				>
-			</li>
-			<li>
-				<input type="checkbox" id="moza-org-om" /><label for="moza-org-om"
-					>Openbaar Ministerie (OM)</label
-				>
-			</li>
-			<li>
-				<input type="checkbox" id="moza-org-rvo" /><label for="moza-org-rvo"
-					>Rijksdienst voor Ondernemend Nederland (RVO)</label
-				>
-			</li>
-			<li>
-				<input type="checkbox" id="moza-org-rdw" /><label for="moza-org-rdw"
-					>Rijksdienst voor het Wegverkeer (RDW)</label
-				>
-			</li>
-			<li>
-				<input type="checkbox" id="moza-org-svb" /><label for="moza-org-svb"
-					>Sociale Verzekeringsbank (SVB)</label
-				>
-			</li>
-			<li>
-				<input type="checkbox" id="moza-org-uwv" /><label for="moza-org-uwv"
-					>Uitvoeringsinstituut Werknemersverzekeringen (UWV)</label
-				>
-			</li>
-		</ul>
+		<form>
+			<ul class="list-plain">
+				<li class="option--confirmed">
+					<input type="checkbox" id="moza-org-kvk" checked disabled /><label
+						for="moza-org-kvk"
+						>Kamer van Koophandel (KVK)</label
+					>
+				</li>
+				<li>
+					<input type="checkbox" id="moza-org-om" /><label for="moza-org-om"
+						>Openbaar Ministerie (OM)</label
+					>
+				</li>
+				<li>
+					<input type="checkbox" id="moza-org-rvo" /><label for="moza-org-rvo"
+						>Rijksdienst voor Ondernemend Nederland (RVO)</label
+					>
+				</li>
+				<li>
+					<input type="checkbox" id="moza-org-rdw" /><label for="moza-org-rdw"
+						>Rijksdienst voor het Wegverkeer (RDW)</label
+					>
+				</li>
+				<li>
+					<input type="checkbox" id="moza-org-svb" /><label for="moza-org-svb"
+						>Sociale Verzekeringsbank (SVB)</label
+					>
+				</li>
+				<li>
+					<input type="checkbox" id="moza-org-uwv" /><label for="moza-org-uwv"
+						>Uitvoeringsinstituut Werknemersverzekeringen (UWV)</label
+					>
+				</li>
+			</ul>
+			<div class="action-group">
+				<button type="submit">Opslaan</button>
+				<button type="reset">Annuleren</button>
+			</div>
+		</form>
 	</section>
 
 	<section class="card">

@@ -8,7 +8,9 @@
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.2",
+		"chokidar-cli": "^3.0.0",
 		"concurrently": "^9.1.2",
-		"chokidar-cli": "^3.0.0"
+		"stylelint": "^17.4.0",
+		"stylelint-use-logical": "^2.1.3"
 	}
 }
