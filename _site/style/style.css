@@ -203,6 +203,11 @@ pre {
 		--mox-color-feedback-success-emphasis
 	); /* Werkt niet in Chromium */
 }
+li.option--confirmed {
+	border-block-end: var(--mox-border-default);
+	margin-block-end: var(--mox-space-margin-xs);
+	padding-block-end: var(--mox-space-padding-sm);
+}
 
 /* Formulier elementen */
 
