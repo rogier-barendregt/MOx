@@ -76,7 +76,7 @@ main {
 	margin-inline: auto;
 	max-inline-size: var(--mox-page-max-inline-size);
 	inline-size: 100%;
-	@media (min-width: 30em) {
+	@media (min-width: 800px) {
 		display: grid;
 		grid-template-columns: auto 1fr;
 	}
@@ -221,7 +221,7 @@ button,
 input,
 select,
 textarea,
-a.btn-cta {
+.btn-cta {
 	align-self: flex-start; /* Voorkomt dat elementen de volledige breedte aannemen in een flexbox container */
 	background: var(--mox-color-interactive-default-surface);
 	border: var(--mox-border-width-md) solid
@@ -233,13 +233,6 @@ a.btn-cta {
 	padding-block: var(--mox-space-padding-sm);
 	padding-inline: var(--mox-space-padding-md);
 	transition: var(--mox-transition-default);
-	&::after {
-		content: url("../assets/icons/icon-link-internal.svg");
-		display: inline-block;
-		inline-size: var(--mox-size-icon-xs);
-		margin-inline-start: var(--mox-space-margin-2xs);
-		vertical-align: middle;
-	}
 	&:hover {
 		border-color: var(--mox-color-interactive-hover-border);
 	}
@@ -252,6 +245,13 @@ a.btn-cta {
 	&.negative {
 		border-color: var(--mox-color-feedback-error-border);
 	}
+}
+.btn-cta::after {
+	content: url("../assets/icons/icon-link-internal.svg");
+	display: inline-block;
+	inline-size: var(--mox-size-icon-xs);
+	margin-inline-start: var(--mox-space-margin-2xs);
+	vertical-align: middle;
 }
 
 /* Formulieren: Labeling */
@@ -463,6 +463,56 @@ nav {
 
 /* Navigatie: Sub-navigatie */
 
+/* Responsive menu */
+button.sub-nav-toggle {
+	align-items: center;
+	background: var(--mox-color-background-default);
+	color: var(--mox-color-interactive-default-text);
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	inset-block-start: var(--mox-space-padding-sm);
+	&::before {
+		content: "";
+		background-color: currentColor;
+		block-size: var(--mox-size-icon-xs);
+		mask-image: url("../assets/icons/icon-menu.svg");
+		mask-size: contain;
+		mask-repeat: no-repeat;
+		mask-position: center;
+		margin-inline-end: var(--mox-space-margin-2xs);
+		transition: var(--mox-transition-transform);
+		inline-size: var(--mox-size-icon-sm);
+	}
+	&:hover,
+	&:active,
+	&:focus,
+	&:focus-visible,
+	&:focus-within {
+		background: inherit;
+		color: inherit;
+	}
+	&[aria-expanded="true"]::before {
+		mask-image: url("../assets/icons/icon-chevron.svg");
+		inline-size: var(--mox-size-icon-xs);
+		transform: rotate(180deg);
+	}
+	@media (max-width: 799px) {
+		align-items: baseline;
+		display: flex;
+	}
+}
+.sub-nav ul {
+	@media (max-width: 799px) {
+		display: none;
+	}
+	li {
+		inline-size: 100%;
+	}
+}
+.sub-nav-toggle[aria-expanded="true"] + ul {
+	display: block;
+}
 .sub-nav {
 	padding-inline: var(--mox-space-padding-md);
 	li {
@@ -613,7 +663,6 @@ summary {
 	box-shadow: var(--mox-border-card-default);
 	display: flex;
 	flex-direction: column;
-	/* gap: var(--mox-space-padding-lg); */
 	padding: var(--mox-space-component-card-padding);
 	section:not(:last-of-type) {
 		border-block-end: var(--mox-border-default);
@@ -786,6 +835,9 @@ body.moza {
 	max-inline-size: var(--mox-page-max-inline-size);
 	padding-block: var(--mox-space-padding-xs);
 	padding-inline: var(--mox-space-padding-md);
+	@media (max-width: 799px) {
+		/* display: none; */
+	}
 }
 
 .moza article {
