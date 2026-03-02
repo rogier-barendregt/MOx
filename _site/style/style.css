@@ -271,12 +271,7 @@ label {
 }
 
 /* Actiegroep; groeperen van gerelateerde acties */
-.list-plain + .action-group {
-	display: none;
-}
-.list-plain:has(input:not([disabled]):checked) + .action-group {
-	display: flex;
-}
+
 .action-group {
 	display: flex;
 	flex-direction: column;
@@ -585,6 +580,7 @@ footer {
 }
 .footer-links {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	margin-inline: auto;
 	max-inline-size: var(--mox-page-max-inline-size);
@@ -595,6 +591,9 @@ footer {
 .list-plain {
 	list-style: none;
 	padding: 0;
+	li {
+		border: 0 !important;
+	}
 }
 li {
 	margin-block-end: var(--mox-space-margin-2xs);
@@ -838,7 +837,7 @@ body.moza {
 	max-inline-size: var(--mox-page-max-inline-size);
 	padding-block: var(--mox-space-padding-xs);
 	padding-inline: var(--mox-space-padding-md);
-	@media (max-width: 799px) {
+	@media (max-width: var(--mox-breakpoint-md)) {
 		/* display: none; */
 	}
 }
