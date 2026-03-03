@@ -45,6 +45,7 @@ body {
 }
 
 header {
+	position: relative;
 	margin-block-end: var(--mox-space-margin-md);
 	.logo {
 		margin-block-end: var(--mox-space-margin-xs);
@@ -61,6 +62,13 @@ header {
 	.user-menu {
 		display: flex;
 		gap: var(--mox-space-padding-md);
+	}
+	.side-nav-secret-toggle {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-end: 0;
+		inline-size: 3rem;
+		block-size: 3rem;
 	}
 }
 .page-head {
@@ -505,6 +513,9 @@ button.side-nav-toggle {
 }
 .side-nav-toggle[aria-expanded="true"] + ul {
 	display: block;
+}
+.temp-moza-subnav-preview.hidden {
+	display: none;
 }
 .side-nav {
 	padding-inline: var(--mox-space-padding-md);
