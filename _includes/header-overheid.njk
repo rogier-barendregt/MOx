@@ -29,6 +29,6 @@
 	<a class="temp-moza-poc-banner" href="https://www.mijnoverheidzakelijk.nl/">Proof of Concept</a>
 
 	<a href="#" class="side-nav-secret-toggle" aria-label="Toggle navigatie" onclick="event.preventDefault(); const hidden = sessionStorage.getItem('subnav-preview') === 'hidden' ? '' : 'hidden'; sessionStorage.setItem('subnav-preview', hidden); document.querySelectorAll('.temp-moza-subnav-preview').forEach(el => el.classList.toggle('hidden', !!hidden));"></a>
-	<script>if (sessionStorage.getItem('subnav-preview') === 'hidden') document.querySelectorAll('.temp-moza-subnav-preview').forEach(el => el.classList.add('hidden'));</script>
+	<script>document.addEventListener('DOMContentLoaded', function() { if (sessionStorage.getItem('subnav-preview') === 'hidden') document.querySelectorAll('.temp-moza-subnav-preview').forEach(el => el.classList.add('hidden')); });</script>
 
 </header>
